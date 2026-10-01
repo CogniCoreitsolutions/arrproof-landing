@@ -13,7 +13,10 @@
 <meta property="og:description" content="ARR-Prüfung für Softwarehäuser mit HubSpot, jede Zahl bis zu Vertrag, Rechnung und Zahlung. Eine Leistung der CogniCore IT Solutions GmbH.">
 <meta property="og:image" content="https://arrproof.com/img/app-herkunft.webp">
 <meta property="og:locale" content="de_DE">
-<link rel="icon" type="image/png" href="assets/cognicore-icon-white.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#F4F4F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500..800&amp;family=Red+Hat+Mono:wght@400..600&amp;family=Red+Hat+Text:ital,wght@0,400..700;1,400&amp;display=swap">
@@ -40,7 +43,8 @@ p{margin:0}
 /* Kopf */
 .top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
 .top .wrap{display:flex;align-items:center;gap:12px 24px;min-height:62px;flex-wrap:wrap}
-.wm{font-family:var(--f-disp);font-weight:800;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-disp);font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.wm .mark{height:30px;width:auto;flex:0 0 auto}
 .top nav{display:flex;gap:4px 22px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:15px}
 .top nav a{text-decoration:none;color:var(--text);padding:8px 0}
 .top nav a:hover{color:var(--accent)}
@@ -172,7 +176,7 @@ footer nav{display:flex;gap:20px}
 
 <header class="top">
   <div class="wrap">
-    <a class="wm" href="#top">ARRproof</a>
+    <a class="wm" href="#top" aria-label="ARRproof, zur Startseite"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
     <nav aria-label="Seitenbereiche">
       <a href="#ablauf">Ablauf</a>
       <a href="#werkzeug">Werkzeug</a>

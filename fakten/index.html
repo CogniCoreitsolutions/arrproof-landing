@@ -12,7 +12,10 @@
 <meta property="og:title" content="Fakten zu ARRproof">
 <meta property="og:description" content="Kerndaten, Datenzugriff, Methode, Abgrenzung und häufige Fragen zu ARRproof, einer Leistung der CogniCore IT Solutions GmbH.">
 <meta property="og:locale" content="de_DE">
-<link rel="icon" type="image/png" href="../assets/cognicore-icon-white.png">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#F4F4F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500..800&amp;family=Red+Hat+Mono:wght@400..600&amp;family=Red+Hat+Text:ital,wght@0,400..700;1,400&amp;display=swap">
@@ -58,6 +61,7 @@
       "description": "ARRproof ist eine Beratungsleistung der CogniCore IT Solutions GmbH. ARRproof gleicht den wiederkehrenden Umsatz eines Softwarehauses mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab und führt jede Zahl bis zum einzelnen Beleg zurück.",
       "url": "https://arrproof.com/",
       "provider": { "@id": "https://arrproof.com/#organization" },
+      "logo": "https://arrproof.com/assets/arrproof-mark-512.png",
       "audience": { "@type": "BusinessAudience", "audienceType": "Softwarehäuser mit Abo-Geschäft, die HubSpot nutzen" },
       "availableLanguage": "de"
     },
@@ -111,7 +115,8 @@ p{margin:0}
 .wrap{max-width:900px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
 .top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
 .top .wrap{max-width:1180px;display:flex;align-items:center;gap:12px 24px;min-height:62px;flex-wrap:wrap}
-.wm{font-family:var(--f-disp);font-weight:800;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-disp);font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.wm .mark{height:30px;width:auto;flex:0 0 auto}
 .top nav{display:flex;gap:4px 22px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:15px}
 .top nav a{text-decoration:none;color:var(--text);padding:8px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;background:var(--ink);color:#fff !important}
@@ -168,7 +173,7 @@ footer nav{display:flex;gap:20px}
 
 <header class="top">
   <div class="wrap">
-    <a class="wm" href="../">ARRproof</a>
+    <a class="wm" href="../" aria-label="ARRproof, zur Startseite"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
     <nav aria-label="Seitenbereiche">
       <a href="../">Startseite</a>
       <a href="#fragen">Häufige Fragen</a>
