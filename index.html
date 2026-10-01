@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARRproof · SaaS-Umsatz prüfen, bis zum einzelnen Vertrag · CogniCore</title>
+<meta name="description" content="ARRproof rechnet ARR-Brücke, Kohorten, Net Revenue Retention und den Abgleich bis zur Finanzbuchhaltung aus Verträgen, Rechnungen und Zahlungen eines Softwarehauses. Jede Zahl mit Datensatz.">
+<!-- Bis Name, Marke und Domain geklärt sind: nicht indexieren -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://arrproof.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ARRproof · SaaS-Umsatz prüfen, bis zum einzelnen Vertrag">
+<meta property="og:description" content="ARR-Brücke, Kohorten, Retention und Abgleich bis zur FiBu, aus den Verträgen eines Softwarehauses gerechnet. Ein Produkt der CogniCore IT Solutions GmbH.">
+<meta property="og:image" content="https://arrproof.com/img/bruecke.webp">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" type="image/png" href="assets/cognicore-icon-white.png">
+<style>
+@font-face{font-family:'Raleway';src:url('assets/Raleway-VariableFont_wght.ttf') format('truetype-variations');font-weight:100 900;font-style:normal;font-display:swap}
+:root{
+  --navy:#0B1F3C;--navy-2:#13294D;--ink:#16233A;--slate:#3A4763;--muted:#5B6B82;--line:#E2E6EF;--line-2:#EEF1F6;
+  --orange:#EC6945;--orange-d:#D9572F;--orange-l:#F4A287;--cream:#FBF3EF;--bg:#F5F7FB;--white:#fff;--green:#1E7A4F;--red:#B42318;
+  --radius:12px;--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Raleway',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.6;font-feature-settings:"lnum" 1,"tnum" 1;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em}
+/* Kopf */
+header.top{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)}
+header.top .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand img{width:34px;height:34px}
+.brand b{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-size:11px;color:#9AA8C2;font-weight:500}
+nav.main{display:flex;gap:26px;margin-left:auto}
+nav.main a{color:#DCE2EE;text-decoration:none;font-size:14px;font-weight:600}
+nav.main a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:12px 22px;border-radius:8px;border:0;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--orange-d)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn.line{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn.line:hover{border-color:#C9D1E1}
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 62%,var(--bg) 62%);padding:64px 0 72px;color:#fff}
+.over{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--orange)}
+.over:before{content:"";width:28px;height:2px;background:var(--orange)}
+.hero h1{font-size:50px;line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:18px 0 18px;max-width:820px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lead{font-size:18.5px;color:#C7D0E2;max-width:760px;line-height:1.6}
+.hero .cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 22px;margin-top:30px}
+.hero .cta .alt{font-size:14.5px;color:#C7D0E2}
+.hero .cta .alt a{color:#fff;font-weight:700;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:22px;font-size:13.5px;color:#9AA8C2;list-style:none}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust li:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(236,105,69,.16);color:var(--orange-l);border:1px solid rgba(236,105,69,.35)}
+.frame{margin-top:46px;background:#fff;border-radius:14px;box-shadow:0 30px 70px rgba(7,27,62,.28);overflow:hidden;border:1px solid rgba(7,27,62,.12)}
+.frame .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 18px;background:#F2F5FA;border-bottom:1px solid var(--line);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.frame .bar b{color:var(--ink)}
+.frame .bar .ok{background:#E3F4EA;color:var(--green);padding:3px 9px;border-radius:5px;letter-spacing:.06em}
+.frame img{width:100%}
+.cap{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* Abschnitte */
+section{padding:84px 0}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--orange);margin-bottom:10px}
+.eyebrow span{color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:600;margin-left:10px}
+h2{font-size:34px;line-height:1.18;font-weight:800;letter-spacing:-.015em;color:var(--ink);max-width:820px}
+h3{font-size:19px;font-weight:800;color:var(--ink);line-height:1.3}
+.sub{font-size:17px;color:var(--slate);max-width:780px;margin-top:14px}
+.rule{display:flex;align-items:center;gap:22px;margin-bottom:30px}
+.rule h2{font-size:24px;white-space:nowrap}
+.rule:after{content:"";flex:1;height:1px;background:var(--line)}
+/* Momente */
+.moments{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.moment{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 24px}
+.moment:before{content:"";display:block;width:26px;height:2px;background:var(--orange);margin-bottom:16px}
+.moment h3{font-size:16.5px;margin-bottom:8px}
+.moment p{font-size:14.5px;color:var(--muted);line-height:1.55}
+.moment .tag{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-d)}
+/* Ebenen */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.tile .k{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:12px}
+.tile .k i{font-style:normal;font-size:11px;letter-spacing:.04em;text-transform:none;font-weight:700;background:#E3F4EA;color:var(--green);padding:2px 8px;border-radius:10px}
+.tile h3{font-size:18px;margin-bottom:8px}
+.tile p{font-size:14.5px;color:var(--muted)}
+/* Zweispalter */
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.split.rev{grid-template-columns:1.15fr 1fr}
+.split.rev .txt{order:2}
+.split .txt p{color:var(--slate);margin-top:14px;font-size:16px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 16px 40px rgba(7,27,62,.10);overflow:hidden}
+.shot.tall{max-height:600px}
+ul.dash{list-style:none;margin-top:20px}
+ul.dash li{position:relative;padding:6px 0 6px 24px;font-size:15px;color:var(--slate)}
+ul.dash li:before{content:"";position:absolute;left:0;top:17px;width:12px;height:2px;background:var(--orange)}
+ul.dash li b{color:var(--ink)}
+.band-cream{background:var(--cream)}
+.band-white{background:#fff}
+/* Datenschutz */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px}
+.col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:10px}
+.col.yes h4{color:var(--green)}.col.no h4{color:var(--red)}
+.col ul{list-style:none}
+.col li{position:relative;padding:7px 0 7px 26px;font-size:15px;color:var(--slate);border-top:1px solid var(--line-2)}
+.col li:first-child{border-top:0}
+.col.yes li:before{content:"✓";position:absolute;left:2px;top:7px;color:var(--green);font-weight:800}
+.col.no li:before{content:"✕";position:absolute;left:2px;top:7px;color:var(--red);font-weight:800}
+.schema{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 16px 40px rgba(7,27,62,.08)}
+.schema .hd{display:flex;justify-content:space-between;font-size:12px;font-weight:800;color:var(--orange-d);margin-bottom:14px}
+.schema .hd span{color:var(--muted);font-weight:600}
+.schema .grp{border:1.5px solid #9CCFB2;border-radius:8px;padding:10px 12px;margin-bottom:12px;background:#F4FBF7}
+.schema .grp.no{border-color:#F1B9AE;background:#FDF5F3}
+.schema .grp .t{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-bottom:8px;display:flex;justify-content:space-between}
+.schema .grp .t b{color:var(--green)}.schema .grp.no .t b{color:var(--red)}
+.schema .chips{display:flex;flex-wrap:wrap;gap:6px}
+.schema .chips span{font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--ink)}
+.schema .grp.no .chips span{color:var(--muted);text-decoration:line-through;text-decoration-color:#E7A496}
+/* Methodik */
+.defs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.def{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.def h3{font-size:16px;margin-bottom:8px}
+.def p{font-size:14px;color:var(--muted)}
+.def code{background:var(--bg);padding:1px 5px;border-radius:4px;color:var(--ink)}
+.note{margin-top:22px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:8px;padding:14px 18px;font-size:15px;color:var(--slate)}
+.note b{color:var(--ink)}
+/* Setup-App */
+.setup{background:var(--navy);color:#DCE2EE;border-radius:16px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.setup h2{color:#fff}
+.setup p{color:#C7D0E2;margin-top:14px}
+.setup ul.dash li{color:#DCE2EE}
+.setup ul.dash li b{color:#fff}
+.flow{display:flex;flex-direction:column;gap:10px}
+.flow .st{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 16px}
+.flow .st .n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.flow .st b{color:#fff;display:block;font-size:15px}
+.flow .st span{font-size:13.5px;color:#AEB9CF}
+/* Einstieg */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px;position:relative}
+.step .n{width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy);background:#fff;margin-bottom:14px}
+.step:nth-child(3) .n{background:var(--orange);border-color:var(--orange);color:#fff}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--muted)}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.offer{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.offer .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--orange-d)}
+.offer h3{font-size:22px;margin:8px 0 6px}
+.offer .price{font-size:15px;color:var(--ink);font-weight:700;margin-bottom:12px}
+.offer ul.dash{margin-top:6px}
+.offer .btn{margin-top:18px}
+.after{margin-top:22px;font-size:15px;color:var(--slate)}
+/* Band */
+.band-navy{background:var(--navy);color:#DCE2EE;padding:46px 0}
+.band-navy .wrap{display:grid;grid-template-columns:260px 1fr;gap:30px;align-items:start}
+.band-navy h2{color:#fff;font-size:26px}
+.band-navy .row{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);font-size:15px}
+.band-navy .row:first-child{border-top:0}
+.band-navy .row b{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.band-navy .row.yes b{color:#7FD3A3}.band-navy .row.no b{color:#F4A287}
+/* Abschluss */
+.final{text-align:left}
+.final .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.final p{color:var(--slate);margin-top:12px}
+.final .side{font-size:15px;color:var(--slate);border-left:1px solid var(--line);padding-left:32px}
+.final .side b{color:var(--ink)}
+/* FAQ */
+.faq{max-width:860px;margin-top:26px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;font-weight:700;font-size:16.5px;color:var(--ink);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:6px;top:14px;font-size:22px;color:var(--orange);font-weight:500}
+.faq details[open] summary:after{content:"−"}
+.faq details p{padding:0 40px 20px 0;color:var(--slate);font-size:15.5px}
+/* Fuß */
+footer{background:var(--navy);color:#9AA8C2;padding:30px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer nav{display:flex;gap:22px;align-items:center}
+footer a{color:#C7D0E2;text-decoration:none}
+footer a:hover{color:#fff}
+@media (max-width:1060px){
+  .moments,.tiles,.defs,.steps{grid-template-columns:1fr 1fr}
+  .split,.split.rev,.setup,.final .box,.cols2{grid-template-columns:1fr}
+  .split.rev .txt{order:0}
+  nav.main{display:none}
+  .band-navy .wrap{grid-template-columns:1fr}
+  .final .side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero h1{font-size:34px}
+  h2{font-size:26px}
+  section{padding:60px 0}
+  .moments,.tiles,.defs,.steps,.offers{grid-template-columns:1fr}
+  header.top .wrap{gap:12px}
+  header.top .btn.sm{padding:8px 12px;font-size:13px}
+  .frame .bar{flex-direction:column;align-items:flex-start;gap:6px}
+  .setup,.final .box{padding:26px}
+  .band-navy .row{grid-template-columns:1fr;gap:4px}
+  .rule h2{white-space:normal}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "Organization", "@id": "https://arrproof.com/#organization", "name": "CogniCore IT Solutions GmbH", "legalName": "CogniCore IT Solutions GmbH", "url": "https://www.cognicore.de", "sameAs": ["https://www.linkedin.com/company/cognicore-it-solutions/"]},
+    {"@type": "WebSite", "@id": "https://arrproof.com/#website", "url": "https://arrproof.com/", "name": "ARRproof", "publisher": {"@id": "https://arrproof.com/#organization"}, "inLanguage": "de"},
+    {"@type": "SoftwareApplication", "@id": "https://arrproof.com/#software", "name": "ARRproof", "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
+     "description": "ARRproof rechnet ARR-Brücke, Kohorten, Net Revenue Retention und den Abgleich bis zur Finanzbuchhaltung aus Verträgen, Rechnungen und Zahlungen eines Softwarehauses und belegt jede Zahl mit dem Datensatz, aus dem sie stammt.",
+     "publisher": {"@id": "https://arrproof.com/#organization"}},
+    {"@type": "FAQPage", "@id": "https://arrproof.com/#faq", "mainEntity": [
+      {"@type": "Question", "name": "Was ist ARRproof?", "acceptedAnswer": {"@type": "Answer", "text": "ARRproof ist eine Anwendung der CogniCore IT Solutions GmbH für die Umsatzprüfung von Softwarehäusern. Sie rechnet aus Verträgen, Rechnungen, Zahlungen und Erlöskonten die Kennzahlen einer Financial Due Diligence und belegt jede Zahl mit dem Datensatz, aus dem sie stammt."}},
+      {"@type": "Question", "name": "Wie weit ist ARRproof?", "acceptedAnswer": {"@type": "Answer", "text": "ARRproof ist in der Pilotphase. Die Auswertung läuft heute auf einem synthetischen Testdatensatz. Die Anbindung an echte HubSpot-Portale und die Setup-App für den HubSpot Marketplace sind in Entwicklung."}},
+      {"@type": "Question", "name": "Wer bietet ARRproof an?", "acceptedAnswer": {"@type": "Answer", "text": "Die CogniCore IT Solutions GmbH aus Köln, HubSpot Solutions Partner und Microsoft Partner. Von CogniCore stammt auch BP-Docs, die Dokumentation von HubSpot-Portalen."}}
+    ]}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top" aria-label="ARRproof, zum Seitenanfang"><img src="assets/cognicore-icon-white.png" alt=""><span><b>ARRproof</b><small>von CogniCore</small></span></a>
+  <nav class="main" aria-label="Hauptnavigation">
+    <a href="#produkt">Produkt</a><a href="#pruefpfad">Prüfpfad</a><a href="#datenschutz">Datenschutz</a><a href="#setup">HubSpot-Setup</a><a href="#einstieg">Einstieg</a>
+  </nav>
+  <a class="btn sm" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Demo%20vereinbaren">Demo vereinbaren</a>
+</div></header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero"><div class="wrap">
+  <div class="over">Revenue Due Diligence für Softwarehäuser</div>
+  <h1>Ihr ARR, belegt bis zum <em>einzelnen Vertrag</em>.</h1>
+  <p class="lead">ARRproof liest Verträge, Rechnungen, Zahlungseingänge und Erlöskonten und rechnet daraus die Kennzahlen, nach denen Käufer und Prüfer fragen: ARR-Brücke, Kohorten, Net Revenue Retention und den Abgleich mit der Finanzbuchhaltung. Hinter jeder Zahl steht der Datensatz, aus dem sie kommt.</p>
+  <div class="cta">
+    <a class="btn" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Demo%20vereinbaren">Demo vereinbaren</a>
+    <span class="alt">Sie prüfen ein Softwarehaus? <a href="#methodik">So rechnet ARRproof</a>, mit allen Definitionen und Annahmen.</span>
+  </div>
+  <ul class="trust">
+    <li>Jede Zahl mit Datensatz-ID</li><li>Abgleich bis zur FiBu</li><li>Auf dem HubSpot-Datenmodell aufgebaut</li><li><span class="pill">Pilotphase</span></li>
+  </ul>
+  <div class="frame">
+    <div class="bar"><span>Quellen <b>HubSpot · ERP · Bank · FiBu</b> · Testdatensatz Velmont · Stichtag 30.09.2026</span><span class="ok">Nur lesen</span></div>
+    <img src="img/bruecke.webp" width="1400" height="530" alt="ARR-Brücke der letzten zwölf Monate mit Neukunden, Ausbau nach Menge und Preis, Migration, Reduzierung und Kündigung">
+  </div>
+  <p class="cap">Ansicht aus dem MVP mit einem synthetischen Testdatensatz. Alle Firmen und Beträge sind erfunden.</p>
+</div></div>
+
+<!-- MOMENTE -->
+<section style="padding-top:40px"><div class="wrap">
+  <div class="rule"><h2>Für diese Momente gebaut</h2></div>
+  <div class="moments">
+    <div class="moment"><h3>Ein Verkauf steht an</h3><p>Bevor der Käufer fragt, kennen Sie Ihre ARR-Brücke und die Lücken in Ihren Daten. Die Antworten liegen bereit, mit Beleg.</p></div>
+    <div class="moment"><h3>Sie prüfen ein Softwarehaus</h3><p>Sie bekommen den MRR je Kunde und Monat aus den Verträgen und rechnen jede Kennzahl selbst nach.</p></div>
+    <div class="moment"><h3>Investoren fragen nach der NRR</h3><p>Die Kennzahl kommt jeden Monat aus denselben Daten und mit derselben Definition. Abweichungen lassen sich erklären.</p></div>
+    <div class="moment"><h3>Sie bauen HubSpot neu auf</h3><p>Die Setup-App legt die Felder an, die eine Umsatzprüfung später braucht, von Anfang an.</p><span class="tag">in Entwicklung</span></div>
+  </div>
+</div></section>
+
+<!-- PRODUKT -->
+<section id="produkt" style="padding-top:20px"><div class="wrap">
+  <div class="eyebrow">Was ARRproof rechnet</div>
+  <h2>Alle Kennzahlen auf einer Grundlage</h2>
+  <p class="sub">Aus jeder Vertragsposition wird der MRR eines Kunden für jeden Monat ihrer Gültigkeit. Auf diesem Würfel aus Kunde und Monat rechnen alle Auswertungen, deshalb passen Brücke und Kohorten zum Abgleich mit der Buchhaltung.</p>
+  <div class="tiles">
+    <div class="tile"><div class="k">Umsatz<i>enthalten</i></div><h3>ARR-Brücke</h3><p>Neukunden, Ausbau nach Preis und Menge, Migration, Reduzierung und Kündigung, je Jahr, Quartal oder Monat. Mit Prüfzeile, die auf den Cent aufgeht.</p></div>
+    <div class="tile"><div class="k">Bestand<i>enthalten</i></div><h3>Kohorten und Retention</h3><p>Netto- und Brutto-Retention rollierend über zwölf Monate, dazu Logo-Retention und Kohorten nach Jahr oder Quartal.</p></div>
+    <div class="tile"><div class="k">Belege<i>enthalten</i></div><h3>Abgleich</h3><p>Umsatz aus Verträgen gegen Rechnungen und Erlöskonten, je Monat und je Kunde. Dazu Forderungen und Rechnungsabgrenzung.</p></div>
+    <div class="tile"><div class="k">Qualität<i>enthalten</i></div><h3>Prüfbefunde</h3><p>22 Regeln über CRM, Verträge, Rechnungen und Zahlungen. Jeder Befund nennt den Datensatz und die Auswirkung auf ARR oder Umsatz.</p></div>
+  </div>
+</div></section>
+
+<!-- KOHORTEN -->
+<section class="band-white"><div class="wrap split">
+  <div class="txt">
+    <div class="eyebrow">Kohorten</div>
+    <h2>Kohorten, gebildet aus den Vertragsdaten</h2>
+    <p>Eine Kohorte beginnt mit dem ersten Monat, in dem ein Kunde wiederkehrenden Umsatz bringt. ARRproof leitet diesen Monat aus den Vertragspositionen ab. Ein manuell gepflegtes Feld „Kunde seit“ wird dafür nicht gebraucht, im Testdatensatz widerspricht es bei 88 aktiven Kunden den Verträgen.</p>
+    <ul class="dash">
+      <li>Basis wählbar: erste Subscription oder erster wiederkehrender Umsatz inklusive Pflege</li>
+      <li>Umsatz-Retention netto oder brutto, Logos oder ARR absolut, dazu die Kurven je Kohorte</li>
+    </ul>
+  </div>
+  <div class="shot"><img src="img/kohorten.webp" width="1400" height="564" alt="Kohorten-Matrix nach Startjahr mit Umsatz-Retention je Folgejahr" loading="lazy"></div>
+</div></section>
+
+<!-- LEGACY -->
+<section><div class="wrap split rev">
+  <div class="shot"><img src="img/legacy.webp" width="1400" height="560" alt="Legacy-Bestand, Migrationen in die Cloud und Pflege-Kündigungen je Jahr" loading="lazy"></div>
+  <div class="txt">
+    <div class="eyebrow">Legacy und Migration</div>
+    <h2>Für Softwarehäuser mit Geschichte</h2>
+    <p>In vielen Häusern laufen Kauflizenz mit Softwarepflege und Abo nebeneinander, oft noch mit Hosting. ARRproof zeigt, wie viel ARR noch an Pflegeverträgen hängt und mit welchem Aufschlag Kunden in die Cloud wechseln.</p>
+    <ul class="dash">
+      <li><b>Softwarepflege im ARR</b> per Schalter ein oder aus, alle Auswertungen rechnen sofort neu</li>
+      <li>Aufschlag je Migration nach zwölf Monaten, dazu der Restbestand mit Lizenzalter und offenen Angeboten aus der Pipeline</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- ABGLEICH -->
+<section class="band-cream"><div class="wrap split">
+  <div class="txt">
+    <div class="eyebrow">Quality of Revenue</div>
+    <h2>Vertrag, Rechnung und Buchhaltung im monatlichen Abgleich</h2>
+    <p>Drei Sichten auf denselben Umsatz: vertraglich aus den Vertragspositionen, fakturiert aus den Rechnungen auf den Leistungszeitraum verteilt und gebucht auf den Erlöskonten. Wo sie auseinanderlaufen, nennt ARRproof den Kunden und den Grund.</p>
+    <ul class="dash">
+      <li>Abweichungen je Kunde mit Einordnung</li>
+      <li>Manuelle Buchungen und Kursdifferenzen getrennt ausgewiesen</li>
+      <li>Forderungen nach Alter und DSO</li>
+      <li>Passive Rechnungsabgrenzung direkt aus den Leistungszeiträumen</li>
+    </ul>
+  </div>
+  <div class="shot"><img src="img/abgleich.webp" width="1400" height="750" alt="Monatlicher Abgleich von vertraglichem, fakturiertem und gebuchtem Umsatz" loading="lazy"></div>
+</div></section>
+
+<!-- PRÜFPFAD -->
+<section id="pruefpfad"><div class="wrap split rev">
+  <div class="shot tall"><img src="img/pruefpfad.webp" width="1400" height="1041" alt="Kundenansicht mit MRR-Verlauf, Verträgen im Zeitverlauf und Vertragspositionen" loading="lazy"></div>
+  <div class="txt">
+    <div class="eyebrow">Prüfpfad</div>
+    <h2>Vom ARR bis zur Zahlung, für jeden Kunden</h2>
+    <p>Jede Zahl lässt sich aufklappen: Von der Brücke geht es zu den Kunden, vom Kunden zu Verträgen, Positionsversionen, Rechnungen und Zahlungen. Jede Zeile trägt ihre HubSpot-ID.</p>
+    <ul class="dash">
+      <li>Verträge im Zeitverlauf: Kauflizenz, Pflege, Hosting, Abo und Nachträge</li>
+      <li>Jede Vertragsposition mit <b>Gültigkeit, Änderungsgrund und Vorgänger</b>, so wird der Preiseffekt sichtbar</li>
+      <li>Die Befunde zum Kunden stehen direkt in der Ansicht</li>
+      <li>Export als CSV für Ihre Arbeitspapiere, vom MRR-Würfel bis zur Befundliste</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- BEFUNDE -->
+<section class="band-white"><div class="wrap split">
+  <div class="txt">
+    <div class="eyebrow">Prüfbefunde</div>
+    <h2>Die Lücken in den Daten finden Sie vor dem Käufer</h2>
+    <p>In gewachsenen Portalen stehen Verträge doppelt im CRM, und manche Rechnung wird nie gestellt. ARRproof prüft das mit 22 Regeln und beziffert, wie viel ARR oder Umsatz betroffen ist.</p>
+    <ul class="dash">
+      <li>Aktive Verträge ohne aktuelle Rechnung</li>
+      <li>Doppelt erfasste Vertragspositionen</li>
+      <li>Rechnungen an Debitoren, die im CRM fehlen</li>
+      <li>Deals mit dem Gesamtvertragswert im Feld Betrag</li>
+    </ul>
+    <p style="font-size:14.5px;color:var(--muted)">Im Testdatensatz sind solche Fehler bewusst eingebaut. ARRproof findet jeden davon.</p>
+  </div>
+  <div class="shot"><img src="img/befunde.webp" width="1400" height="706" alt="Liste der Prüfregeln mit Schwere und betroffenen Datensätzen" loading="lazy"></div>
+</div></section>
+
+<!-- DATENSCHUTZ -->
+<section id="datenschutz"><div class="wrap split rev">
+  <div class="schema" aria-label="Was ARRproof abruft und was nicht">
+    <div class="hd">Ihr HubSpot-Portal <span>und angebundene Systeme</span></div>
+    <div class="grp"><div class="t"><span>Für die Auswertung</span><b>ruft ARRproof ab</b></div>
+      <div class="chips"><span>Firmen</span><span>Deals</span><span>Positionen</span><span>Verträge</span><span>Vertragspositionen</span><span>Rechnungen</span><span>Zahlungseingänge</span><span>Erlöskonten je Monat</span></div></div>
+    <div class="grp no"><div class="t"><span>Für die Auswertung nicht nötig</span><b>ruft ARRproof nicht ab</b></div>
+      <div class="chips"><span>Kontakte</span><span>E-Mails</span><span>Notizen</span><span>Dateien</span><span>Anrufe</span><span>Meetings</span><span>Listenmitglieder</span><span>Marketing-Inhalte</span></div></div>
+  </div>
+  <div class="txt">
+    <div class="eyebrow">Datenschutz (DSGVO) <span>von Anfang an so geplant</span></div>
+    <h2>ARRproof liest, was eine Umsatzprüfung braucht</h2>
+    <p>Für ARR und Abgleich braucht ARRproof Firmen, Verträge, Rechnungen und Zahlungen. Personen braucht es dafür nicht. Die Anbindung ist deshalb so geplant, dass Kontakte, E-Mails, Notizen und die Aktivitäten Ihrer Mitarbeitenden gar nicht erst abgerufen werden. Eine Leistungskontrolle über das Werkzeug ist damit ausgeschlossen.</p>
+    <p>Die übrigen Daten verarbeiten wir in Ihrem Auftrag, mit einem Vertrag zur Auftragsverarbeitung. Für den Betrieb ist ein Rechenzentrum in Deutschland vorgesehen.</p>
+  </div>
+</div></section>
+
+<!-- METHODIK -->
+<section id="methodik" class="band-white"><div class="wrap">
+  <div class="eyebrow">Methodik</div>
+  <h2>So rechnet ARRproof</h2>
+  <p class="sub">Für Prüferinnen und Prüfer zählt, ob eine Zahl nachvollziehbar ist. Die Definitionen stehen deshalb in der Anwendung und lassen sich in Ihre Arbeitspapiere übernehmen.</p>
+  <div class="defs">
+    <div class="def"><h3>MRR-Würfel</h3><p>Jede Vertragsposition schreibt ihren MRR in jeden Monat ihrer Gültigkeit. Daraus entsteht eine Matrix aus Kunde und Monat, auf der alles rechnet.</p></div>
+    <div class="def"><h3>Stichtag Monatsende</h3><p>Eine Position zählt in einem Monat, wenn sie am Monatsende gilt. Eine Kündigung zum 14. fällt damit schon aus diesem Monat heraus.</p></div>
+    <div class="def"><h3>Zwei Brückenmethoden</h3><p>Monatsbewegungen summiert oder Stichtag gegen Stichtag. Beide gehen in Summe auf, die Zusammensetzung unterscheidet sich.</p></div>
+    <div class="def"><h3>NRR und GRR</h3><p><code>NRR = MRR heute / MRR vor 12 Monaten</code> für alle Kunden mit Umsatz vor zwölf Monaten. Die GRR kappt jeden Kunden bei seinem Ausgangswert.</p></div>
+  </div>
+  <div class="note"><b>Annahmen zum Umstellen:</b> Softwarepflege im ARR, Wechselkurs für Fremdwährungen, Dubletten zusammenführen, Auswertung auf Firmen- oder Konzernebene. Jede Änderung rechnet alle Auswertungen neu.</div>
+</div></section>
+
+<!-- SETUP-APP -->
+<section id="setup"><div class="wrap">
+  <div class="setup">
+    <div>
+      <div class="eyebrow">HubSpot-Setup <span style="color:#9AA8C2">in Entwicklung</span></div>
+      <h2>Neue HubSpot-Portale von Anfang an prüfbar</h2>
+      <p>In vielen Portalen fehlen Laufzeit, Verlängerung, Kündigungsfrist und Vertragsende, also genau die Angaben, aus denen sich ARR und Kohorten rechnen lassen. Die Setup-App für den HubSpot Marketplace legt diese Felder beim Einrichten an, nach dem Datenmodell, auf dem ARRproof rechnet.</p>
+      <ul class="dash">
+        <li><b>Felder für Verträge,</b> Gültigkeiten an Positionen, Leistungszeitraum an Rechnungen und die Debitorennummer an der Firma</li>
+        <li>Legt nur Felder an. Ihre Datensätze bleiben unberührt</li>
+      </ul>
+    </div>
+    <div class="flow" aria-label="Ablauf der Setup-App">
+      <div class="st"><div class="n">1</div><div><b>Installieren</b><span>über den HubSpot Marketplace, mit Ihrer Freigabe der Berechtigungen</span></div></div>
+      <div class="st"><div class="n">2</div><div><b>Portal prüfen</b><span>was schon da ist, welche HubSpot-Stufe, welche Felder fehlen</span></div></div>
+      <div class="st"><div class="n">3</div><div><b>Plan freigeben</b><span>Sie sehen vorher genau, was angelegt wird</span></div></div>
+      <div class="st"><div class="n">4</div><div><b>Anlegen und halten</b><span>wiederholbar, mit Protokoll und späterer Prüfung</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- EINSTIEG -->
+<section id="einstieg" class="band-white"><div class="wrap">
+  <div class="eyebrow">So steigen Sie ein</div>
+  <h2>In vier Schritten zum ersten Ergebnis</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Gespräch</h3><p>Wir klären, was geprüft werden soll und mit welchen Systemen Sie arbeiten.</p></div>
+    <div class="step"><div class="n">2</div><h3>Daten bereitstellen</h3><p>Lesender Zugang zu HubSpot, dazu Exporte der Rechnungen und Kontoauszüge. Die Erlöskonten liefert Ihre Buchhaltung.</p></div>
+    <div class="step"><div class="n">3</div><h3>Befunde klären</h3><p>Die Prüfregeln laufen. Offene Punkte bekommen Sie mit Datensatz-ID, damit sie sich schnell klären lassen.</p></div>
+    <div class="step"><div class="n">4</div><h3>Ergebnis</h3><p>Kennzahlen zum vereinbarten Stichtag und den Prüfpfad je Kunde, beides auch als Export.</p></div>
+  </div>
+  <div class="offers">
+    <div class="offer"><div class="k">Zum Kennenlernen</div><h3>Demo am Testdatensatz</h3><div class="price">kostenlos, eine Stunde am Bildschirm</div>
+      <ul class="dash"><li>Alle Auswertungen an einem fiktiven Softwarehaus, bis zur einzelnen Rechnung</li><li>Danach sprechen wir über Ihre Daten</li></ul>
+      <a class="btn" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Demo%20vereinbaren">Demo vereinbaren</a></div>
+    <div class="offer"><div class="k">Pilotphase</div><h3>Pilot mit Ihren Daten</h3><div class="price">Festpreis, vereinbart nach dem ersten Gespräch</div>
+      <ul class="dash"><li>Ihre Daten zu einem vereinbarten Stichtag</li><li>Befundliste mit Auswirkung auf ARR und Umsatz</li><li>Exporte für Ihre Arbeitspapiere</li><li>Für Softwarehäuser und für Prüfer im Mandat</li></ul>
+      <a class="btn line" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Pilot%20anfragen">Pilot anfragen</a></div>
+  </div>
+  <p class="after">Mit den Ergebnissen sind Sie nicht allein. Wir sprechen gern anhand von ARRproof mit Ihnen über Ihre Daten und bringen Verträge und CRM gemeinsam in Ordnung.</p>
+</div></section>
+
+<!-- BAND -->
+<div class="band-navy" id="sicherheit"><div class="wrap">
+  <h2>Was ARRproof aus Ihren Systemen holt</h2>
+  <div>
+    <div class="row yes"><b>Gelesen</b><span>Firmen · Deals und Positionen · Verträge · Rechnungen · Zahlungseingänge · Erlös- und Kostenkonten</span></div>
+    <div class="row no"><b>Nicht abgerufen</b><span>Kontakte und Personendaten · E-Mails, Notizen und Dateien · Anrufe und Meetings · Marketing-Inhalte</span></div>
+  </div>
+</div></div>
+
+<!-- ABSCHLUSS -->
+<section class="final"><div class="wrap">
+  <div class="box">
+    <div>
+      <h2>Sehen Sie es sich einmal in Ruhe an.</h2>
+      <p>Eine Stunde am Testdatensatz: Brücke, Kohorten, Abgleich und Prüfpfad. Danach sprechen wir über Ihre Daten.</p>
+      <a class="btn" style="margin-top:22px" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Demo%20vereinbaren">Demo vereinbaren</a>
+    </div>
+    <div class="side"><b>Sie sind Prüferin oder Prüfer?</b><br>Wir suchen Mandate, in denen wir ARRproof gemeinsam mit Ihnen an echten Daten erproben. Schreiben Sie uns, welche Kennzahlen Ihnen heute die meiste Arbeit machen.</div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section id="fragen" class="band-white"><div class="wrap">
+  <h2>Häufige Fragen</h2>
+  <div class="faq">
+    <details><summary>Was ist ARRproof?</summary><p>ARRproof ist eine Anwendung der CogniCore IT Solutions GmbH für die Umsatzprüfung von Softwarehäusern. Sie rechnet aus Verträgen, Rechnungen, Zahlungen und Erlöskonten die Kennzahlen einer Financial Due Diligence und belegt jede Zahl mit dem Datensatz, aus dem sie stammt.</p></details>
+    <details><summary>Für wen ist ARRproof gedacht?</summary><p>Für Softwarehäuser mit wiederkehrendem Umsatz, die sich auf einen Verkauf, eine Finanzierung oder ein Investorenreporting vorbereiten. Und für Prüferinnen und Prüfer, die solche Unternehmen bewerten und die Zahlen des Managements nachvollziehen wollen.</p></details>
+    <details><summary>Welche Kennzahlen rechnet ARRproof?</summary><p>ARR und MRR nach Umsatzart, die ARR-Brücke mit Neukunden, Ausbau nach Preis und Menge, Migration, Reduzierung und Kündigung, Net und Gross Revenue Retention, Logo-Retention, Kohorten, Kundenkonzentration, Verlängerungstermine und vertraglich gesicherten Restumsatz, den Abgleich mit Rechnungen und Erlöskonten, Forderungen und DSO, passive Rechnungsabgrenzung sowie CAC, Payback und Rule of 40.</p></details>
+    <details><summary>Woher kommen die Daten?</summary><p>Firmen, Deals, Positionen, Verträge und Rechnungen aus HubSpot, Zahlungseingänge aus den Kontoauszügen und Erlös- sowie Kostenkonten aus der Finanzbuchhaltung, etwa als DATEV-Export. ARRproof ist auf das Datenmodell von HubSpot ausgelegt.</p></details>
+    <details><summary>Liest ARRproof personenbezogene Daten?</summary><p>Für die Auswertung braucht ARRproof keine Kontaktdaten. Die Anbindung ist so geplant, dass Kontakte, E-Mails, Notizen und Aktivitäten nicht abgerufen werden. Firmendaten, Verträge und Rechnungen verarbeiten wir im Auftrag, mit einem Vertrag zur Auftragsverarbeitung.</p></details>
+    <details><summary>Verändert ARRproof etwas in HubSpot?</summary><p>Die Auswertung liest nur. Die geplante Setup-App legt nach Ihrer Freigabe Felder und, wo Ihre HubSpot-Stufe es erlaubt, ein Objekt für Verträge an. Datensätze verändert sie nicht.</p></details>
+    <details><summary>Wie geht ARRproof mit Softwarepflege und Kauflizenzen um?</summary><p>Einmalige Lizenzerlöse zählen nicht zum ARR. Ob Softwarepflege als wiederkehrend gilt, ist eine Bewertungsfrage, deshalb lässt sie sich per Schalter ein- oder ausrechnen. Migrationen aus Pflegeverträgen in ein Abo stehen in der Brücke in einer eigenen Zeile.</p></details>
+    <details><summary>Was kostet ARRproof?</summary><p>Die Demo am Testdatensatz ist kostenlos. Für einen Pilot mit Ihren Daten vereinbaren wir nach dem ersten Gespräch einen Festpreis. Eine Preisliste gibt es noch nicht.</p></details>
+    <details><summary>Wie weit ist ARRproof?</summary><p>ARRproof ist in der Pilotphase. Die Auswertung läuft heute auf einem synthetischen Testdatensatz. Die Anbindung an echte HubSpot-Portale und die Setup-App für den HubSpot Marketplace sind in Entwicklung.</p></details>
+    <details><summary>Wer bietet ARRproof an?</summary><p>Die CogniCore IT Solutions GmbH aus Köln, HubSpot Solutions Partner und Microsoft Partner. Von CogniCore stammt auch <a href="https://docu.cognicore.de/">BP-Docs</a>, die Dokumentation von HubSpot-Portalen.</p></details>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <span>ARRproof, ein Produkt der CogniCore IT Solutions GmbH</span>
+  <nav aria-label="Rechtliches">
+    <a href="https://www.cognicore.de/impressum">Impressum</a>
+    <a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a>
+    <a href="https://www.linkedin.com/company/cognicore-it-solutions/" aria-label="CogniCore auf LinkedIn">LinkedIn</a>
+  </nav>
+</div></footer>
+
+</body>
+</html>
