@@ -4,186 +4,344 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ARRproof · Ihren ARR prüfen, bevor es der Käufer tut</title>
-<meta name="description" content="Vor Verkauf, Nachfolge, Investoreneinstieg oder Finanzierungsrunde gleicht Dominik Siegers von CogniCore aus Köln den wiederkehrenden Umsatz von Softwarehäusern mit HubSpot gegen Verträge, Rechnungen, Zahlungseingänge und Buchhaltung ab.">
+<meta name="description" content="Vor Verkauf, Nachfolge, Investoreneinstieg oder Finanzierungsrunde gleicht Dominik Siegers von CogniCore aus Köln den wiederkehrenden Umsatz von Softwarehäusern mit HubSpot gegen Verträge, Rechnungen, Zahlungseingänge und Buchhaltung ab. Jede Zahl mit Herkunft.">
 <!-- Bis Name, Marke und Angebot geklärt sind: nicht indexieren -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://arrproof.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ARRproof · Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.">
-<meta property="og:description" content="ARR-Prüfung für Softwarehäuser mit HubSpot, vor Verkauf, Nachfolge, Investoreneinstieg oder Finanzierungsrunde. Eine Leistung der CogniCore IT Solutions GmbH.">
+<meta property="og:description" content="ARR-Prüfung für Softwarehäuser mit HubSpot, jede Zahl bis zu Vertrag, Rechnung und Zahlung. Eine Leistung der CogniCore IT Solutions GmbH.">
+<meta property="og:image" content="https://arrproof.com/img/app-herkunft.webp">
 <meta property="og:locale" content="de_DE">
 <link rel="icon" type="image/png" href="assets/cognicore-icon-white.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500..800&amp;family=Red+Hat+Mono:wght@400..600&amp;family=Red+Hat+Text:ital,wght@0,400..700;1,400&amp;display=swap">
 <style>
+:root{
+  --ink:#17191C;--text:#33363C;--muted:#5E626A;--faint:#8A8E95;
+  --bg:#F4F4F1;--surface:#FFFFFF;--border:#E1E1DC;--border-2:#ECECE8;
+  --accent:#0F7B5F;--accent-bg:#E6F2EC;--accent-line:#D3E6DC;--warn:#8A4A12;--warn-bg:#FBEEDD;
+  --f-text:'Red Hat Text',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-disp:'Red Hat Display','Red Hat Text',system-ui,sans-serif;
+  --f-mono:'Red Hat Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0}
-a{color:#1A1A1A;text-underline-offset:4px}a:hover{color:#000}
-a:focus-visible{outline:2px solid #5E1A2B;outline-offset:3px}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-text);font-size:17px;line-height:1.6;font-variant-numeric:lining-nums tabular-nums;-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-underline-offset:4px;text-decoration-color:var(--accent-line);text-decoration-thickness:2px}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--f-disp);color:var(--ink);margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+
+/* Kopf */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.top .wrap{display:flex;align-items:center;gap:12px 24px;min-height:62px;flex-wrap:wrap}
+.wm{font-family:var(--f-disp);font-weight:800;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.top nav{display:flex;gap:4px 22px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:15px}
+.top nav a{text-decoration:none;color:var(--text);padding:8px 0}
+.top nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn.pri{background:var(--ink);color:#fff}
+.btn.pri:hover{background:#000;color:#fff}
+.btn.sec{background:#fff;color:var(--ink);border-color:var(--border)}
+.btn.sec:hover{border-color:#C9CBC4;color:var(--ink)}
+.top .btn{min-height:40px;font-size:15px;padding:0 16px}
+
+/* Kopfbereich der Seite */
+.hero{padding:clamp(48px,7vw,96px) 0 clamp(40px,5vw,64px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,64px);align-items:start}
+.label{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:16px}
+.hero h1{font-weight:700;font-size:clamp(40px,5.4vw,66px);line-height:1.04;letter-spacing:-.02em;max-width:14ch}
+.hero p.lead{margin-top:24px;font-size:clamp(18px,1.6vw,20px);max-width:36em}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:32px}
+.cta .alt{font-size:15px;color:var(--muted)}
+
+/* Herkunft (wie der Inspektor in der App) */
+.insp{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px 22px;box-shadow:0 18px 40px rgba(23,25,28,.06)}
+.insp .ih{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.cap{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.insp .nm{font-family:var(--f-disp);font-weight:700;font-size:20px;color:var(--ink);line-height:1.2}
+.insp .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.mv{background:var(--accent-bg);border:1px solid var(--accent-line);border-radius:10px;padding:12px 14px;margin:14px 0 18px}
+.mv .l{font-size:14px;color:var(--text)}
+.mv .big{font-family:var(--f-disp);font-weight:700;font-size:28px;color:var(--accent);letter-spacing:-.01em;line-height:1.2}
+.trail{list-style:none;margin:0;padding:0}
+.trail li{position:relative;padding:0 0 15px 22px;margin-left:6px;border-left:2px solid var(--accent-line)}
+.trail li:last-child{border-left-color:transparent;padding-bottom:0}
+.trail li::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.trail .tv{font-weight:600;color:var(--ink);font-size:15px}
+.trail .td{font-size:14px;color:var(--text)}
+.ok{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--accent);margin-top:1px}
+.ok svg{flex:0 0 14px}
+.mono{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+
+/* Kennzahlen */
+.facts{padding-bottom:clamp(48px,6vw,80px)}
+.facts .note{font-size:14px;color:var(--muted);margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.kpi .k{font-size:13.5px;color:var(--muted)}
+.kpi .v{font-family:var(--f-disp);font-weight:700;font-size:28px;color:var(--ink);letter-spacing:-.01em;margin-top:2px;display:flex;align-items:center;gap:6px}
+.kpi .v.acc{color:var(--accent)}
+.kpi .d{font-size:13.5px;color:var(--muted)}
+
+/* Abschnitte */
+section.band{padding:clamp(56px,7vw,96px) 0;border-top:1px solid var(--border)}
+section.band.white{background:var(--surface)}
+.sh{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px 56px;align-items:end;margin-bottom:clamp(28px,4vw,44px)}
+.sh h2{font-weight:700;font-size:clamp(28px,3.2vw,40px);line-height:1.1;max-width:18ch}
+.sh p{color:var(--text);max-width:34em}
+
+/* Zeitachse */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 18px}
+.steps li{position:relative;border-top:2px solid var(--accent-line);padding-top:20px}
+.steps li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.steps li.here{border-top-color:var(--accent)}
+.steps li.here::before{background:var(--accent);width:14px;height:14px;top:-8px}
+.steps b{display:block;font-family:var(--f-disp);font-weight:700;font-size:16px;color:var(--ink)}
+.steps li.here b{color:var(--accent)}
+.steps span{display:block;font-size:15px;color:var(--text);margin-top:6px;line-height:1.5}
+
+/* Werkzeug */
+.shot{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(23,25,28,.06)}
+.shot img{border-radius:6px}
+.figcap{font-size:14px;color:var(--muted);margin-top:12px}
+
+/* Lieferumfang */
+.deliv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;border-top:1px solid var(--ink)}
+.deliv div{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--border)}
+.deliv dt{font-weight:700;color:var(--ink);font-family:var(--f-disp)}
+.deliv dd{margin:0;color:var(--text)}
+
+/* Befunde */
+.finds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.find{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.rtag{display:inline-block;font-family:var(--f-mono);font-size:12.5px;padding:2px 8px;border-radius:5px;background:var(--warn-bg);color:var(--warn)}
+.find .amt{font-family:var(--f-disp);font-weight:700;font-size:30px;color:var(--ink);margin-top:12px;letter-spacing:-.01em}
+.find p{font-size:15px;margin-top:6px}
+
+/* Ablauf */
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:s}
+.flow li{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 18px 20px;counter-increment:s}
+.flow li::before{content:"Schritt " counter(s);display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.flow li p{font-size:16px}
+.price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);max-width:46em}
+
+/* Über mich */
+.me{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.me img{border-radius:12px;border:1px solid var(--border);aspect-ratio:1/1;object-fit:cover;width:100%}
+.me h2{font-weight:700;font-size:clamp(28px,3.2vw,40px);line-height:1.1;margin-bottom:18px}
+.me p+p{margin-top:14px}
+.me .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.me .tags span{font-size:13.5px;padding:4px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--border);color:var(--text)}
+
+/* Kontakt */
+.contact{background:var(--ink);color:#DADCDF;padding:clamp(64px,8vw,112px) 0}
+.contact h2{color:#fff;font-weight:700;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spacing:-.02em;max-width:16ch}
+.contact p{margin-top:18px;font-size:19px;max-width:32em}
+.contact .cta .btn.pri{background:#fff;color:var(--ink)}
+.contact .cta .btn.pri:hover{background:var(--accent-bg)}
+.contact a.mail{color:#fff;text-decoration-color:rgba(255,255,255,.35)}
+.contact a.mail:hover{color:#9DD0BA}
+
+footer{padding:24px 0 40px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer nav{display:flex;gap:20px}
+
+@media (max-width:1020px){
+  .hero .wrap,.sh,.me{grid-template-columns:minmax(0,1fr)}
+  .kpis,.finds,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .deliv{grid-template-columns:minmax(0,1fr)}
+  .me img{max-width:280px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .top nav a:not(.btn){display:none}
+  .kpis,.finds,.flow,.steps{grid-template-columns:minmax(0,1fr)}
+  .deliv div{grid-template-columns:minmax(0,1fr)}
+  .kpi .v{font-size:26px}
+}
 </style>
 </head>
 <body>
-<div style="background: #FFFFFF; color: #1A1A1A; font-family: 'Archivo', system-ui, sans-serif; font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased">
 
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-<header style="display: flex; justify-content: space-between; align-items: center; gap: 12px 28px; flex-wrap: wrap; padding: 20px 0">
-<a href="#top" style="font-weight: 800; font-stretch: 125%; font-size: 22px; letter-spacing: 0.01em; text-decoration: none; color: #5E1A2B">ARRproof</a>
-<nav aria-label="Seitenbereiche" style="display: flex; align-items: center; gap: 4px 24px; flex-wrap: wrap; font-size: 15px; font-stretch: 90%">
-<a href="#ablauf" style="text-decoration: none; padding: 10px 0">Ablauf</a>
-<a href="#ergebnis" style="text-decoration: none; padding: 10px 0">Ergebnis</a>
-<a href="#kontakt" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #5E1A2B; color: #FFFFFF; text-decoration: none; font-weight: 600">Stichtag nennen</a>
-</nav>
+<header class="top">
+  <div class="wrap">
+    <a class="wm" href="#top">ARRproof</a>
+    <nav aria-label="Seitenbereiche">
+      <a href="#ablauf">Ablauf</a>
+      <a href="#werkzeug">Werkzeug</a>
+      <a href="#ueber-mich">Über mich</a>
+      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
+    </nav>
+  </div>
 </header>
 
-<section id="top" style="padding: clamp(48px, 8vw, 112px) 0 clamp(56px, 8vw, 104px); display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end">
-<div style="flex: 1 1 640px">
-<div style="font-stretch: 85%; font-weight: 600; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: #5E1A2B; margin-bottom: 24px">Für Softwarehäuser mit HubSpot und Abo-Geschäft</div>
-<h1 style="font-weight: 800; font-stretch: 112%; font-size: clamp(42px, 6.6vw, 92px); line-height: 1; letter-spacing: -0.02em; margin: 0; max-width: 14ch">Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.</h1>
-</div>
-<div style="flex: 1 1 380px; max-width: 480px">
-<p style="margin: 0 0 28px">Vor einem Verkauf, einer Nachfolge, dem Einstieg eines Investors oder einer Finanzierungsrunde gleiche ich Ihren wiederkehrenden Umsatz mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab. Was nicht zusammenpasst, wissen Sie dann vor der Gegenseite.</p>
-<a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; background: #5E1A2B; color: #FFFFFF; text-decoration: none; font-weight: 600">Erstgespräch vereinbaren</a>
-</div>
-</section>
-</div>
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="label">Für Softwarehäuser mit HubSpot und Abo-Geschäft</div>
+      <h1>Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.</h1>
+      <p class="lead">Vor einem Verkauf, einer Nachfolge, dem Einstieg eines Investors oder einer Finanzierungsrunde gleiche ich Ihren wiederkehrenden Umsatz mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab. Jede Zahl führt bis zum Beleg. Was nicht zusammenpasst, wissen Sie dann vor der Gegenseite.</p>
+      <div class="cta">
+        <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
+        <span class="alt">oder schreiben Sie mir an <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
+      </div>
+    </div>
 
-<section style="background: #5E1A2B; color: #FFFFFF; padding: clamp(56px, 7vw, 96px) 0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin: 0 0 clamp(40px, 5vw, 64px); max-width: 22ch">Wo ARRproof in einer Transaktion liegt</h2>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 36px 20px">
-<li style="position: relative; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 22px">
-<span style="position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="font-weight: 700; font-stretch: 90%; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase">Heute</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.86)">Der Termin steht oder zeichnet sich ab.</p>
-</li>
-<li style="position: relative; border-top: 4px solid #FFFFFF; padding-top: 20px">
-<span style="position: absolute; top: -10px; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="display: inline-block; font-weight: 800; font-stretch: 112%; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; background: #FFFFFF; color: #5E1A2B; padding: 2px 8px">ARRproof</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5">Ich werte HubSpot, Rechnungen, Bank und Buchhaltung aus und liefere die Befundliste. <span style="border: 1px dashed rgba(255,255,255,0.7); padding: 0 5px; white-space: nowrap">[Dauer]</span></p>
-</li>
-<li style="position: relative; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 22px">
-<span style="position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="font-weight: 700; font-stretch: 90%; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase">Bereinigung</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.86)">Was sich vorher korrigieren lässt, wird korrigiert. Auf Wunsch übernehmen wir das direkt in HubSpot.</p>
-</li>
-<li style="position: relative; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 22px">
-<span style="position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="font-weight: 700; font-stretch: 90%; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase">Datenraum</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.86)">Zahlen und Exporte liegen bereit, jede Zahl bis zum Beleg nachvollziehbar.</p>
-</li>
-<li style="position: relative; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 22px">
-<span style="position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="font-weight: 700; font-stretch: 90%; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase">Due Diligence</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.86)">Der Prüfer der Gegenseite arbeitet mit denselben Daten.</p>
-</li>
-<li style="position: relative; border-top: 2px solid rgba(255,255,255,0.45); padding-top: 22px">
-<span style="position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF"></span>
-<div style="font-weight: 700; font-stretch: 90%; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase">Signing</div>
-<p style="margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.86)">Offene Datenfragen sind bis dahin geklärt.</p>
-</li>
-</ol>
-</div>
+    <aside class="insp" aria-label="Beispiel: Herkunft einer Bewegung im ARR">
+      <div class="ih"><span class="cap">Herkunft</span><span class="mono">Testdatensatz</span></div>
+      <div class="nm">Hagedorn Logistik GmbH</div>
+      <div class="meta">ARR 36.419 € auf 47.976 € in zwölf Monaten</div>
+      <div class="mv"><div class="l">Ausbau Menge im Januar 2026</div><div class="big">+11.556 € ARR</div></div>
+      <ol class="trail">
+        <li><span class="cap">Vertrag</span><div class="tv">V-2026-0002</div><div class="td">Subscription, jährlich, Laufzeit bis 28.02.2027</div></li>
+        <li><span class="cap">Position</span><div class="tv">Velmont Cloud Named User, Menge 54</div><div class="td">ab 01.01.2026, Rabatt 26 %, MRR 963,04 €</div></li>
+        <li><span class="cap">Rechnung</span><div class="tv">RE-2025-000473 vom 20.12.2025</div><div class="td">Leistung 2026, netto 11.556,48 €</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>entspricht 12 × 963,04 € MRR</div></li>
+        <li><span class="cap">Zahlung</span><div class="tv">22.12.2025, 13.752,21 € brutto</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bankumsatz zugeordnet, voll bezahlt</div></li>
+      </ol>
+    </aside>
+  </div>
 </section>
 
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-<section id="ergebnis" style="padding: clamp(64px, 8vw, 112px) 0; display: flex; flex-wrap: wrap; gap: 40px 64px">
-<div style="flex: 1 1 320px; max-width: 420px">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin: 0 0 20px">Das Ergebnis, an einem Testdatensatz</h2>
-<p style="margin: 0 0 16px">Die Velmont Software GmbH ist erfunden, ebenso ihre 590 aktiven Kunden. Gerechnet wird wie in einem echten Mandat, die ARR-Brücke über zwölf Monate Kunde für Kunde.</p>
-<p style="margin: 0; color: #55504B; font-size: 16px">Vom Vertragsumsatz der letzten zwölf Monate sind 99,8 % fakturiert, 99,98 % der fakturierten Erlöse stehen auf den Erlöskonten.</p>
-</div>
-<div style="flex: 1 1 560px; border: 1px solid #D9D4CD; padding: clamp(20px, 3vw, 32px); font-variant-numeric: tabular-nums">
-<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-stretch: 85%; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: #55504B; padding-bottom: 12px; border-bottom: 2px solid #1A1A1A">
-<span>ARR-Brücke, 01.10.2025 bis 30.09.2026</span><span>in Euro</span>
-</div>
-<div style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr) minmax(0, 1.5fr); align-items: center; column-gap: clamp(8px, 2vw, 16px); font-size: clamp(14px, 3.7vw, 16px)">
-<div style="padding: 12px 0; border-bottom: 1px solid #E5E1DB; font-weight: 700">Anfang</div><div style="padding: 12px 0; border-bottom: 1px solid #E5E1DB; text-align: right; font-weight: 700">10.687.329</div><div style="padding: 12px 0; border-bottom: 1px solid #E5E1DB"></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Neukunden</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">+626.247</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%"></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px; display: flex; align-items: center"><div style="width: 89.5%; height: 12px; background: #5E1A2B"></div></div></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Reaktivierung</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">+49.931</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%"></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px; display: flex; align-items: center"><div style="width: 7.1%; height: 12px; background: #5E1A2B"></div></div></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Ausbau Menge</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">+290.031</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%"></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px; display: flex; align-items: center"><div style="width: 41.4%; height: 12px; background: #5E1A2B"></div></div></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Ausbau Preis</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">+241.354</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%"></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px; display: flex; align-items: center"><div style="width: 34.5%; height: 12px; background: #5E1A2B"></div></div></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Migration</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">+560</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%"></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px; display: flex; align-items: center"><div style="width: 2px; height: 12px; background: #5E1A2B"></div></div></div>
-<div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB">Reduzierung</div><div style="padding: 10px 0; border-bottom: 1px solid #E5E1DB; text-align: right">−59.674</div><div style="display: flex; height: 100%; border-bottom: 1px solid #E5E1DB; align-items: center"><div style="width: 50%; height: 24px; display: flex; align-items: center; justify-content: flex-end"><div style="width: 8.5%; height: 12px; background: #8F877E"></div></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px"></div></div>
-<div style="padding: 10px 0; border-bottom: 2px solid #1A1A1A">Kündigung</div><div style="padding: 10px 0; border-bottom: 2px solid #1A1A1A; text-align: right">−349.144</div><div style="display: flex; height: 100%; border-bottom: 2px solid #1A1A1A; align-items: center"><div style="width: 50%; height: 24px; display: flex; align-items: center; justify-content: flex-end"><div style="width: 49.9%; height: 12px; background: #8F877E"></div></div><div style="width: 50%; border-left: 1px solid #1A1A1A; height: 24px"></div></div>
-<div style="padding: 12px 0; font-weight: 700">Ende</div><div style="padding: 12px 0; text-align: right; font-weight: 700">11.486.634</div><div></div>
-</div>
-<div style="text-align: right; font-size: 14px; color: #55504B; padding-top: 4px">Differenz <b style="color: #1A1A1A">0,00</b></div>
-</div>
-</section>
-</div>
-
-<section style="background: #EEEBE6; padding: clamp(64px, 8vw, 112px) 0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 32px 64px">
-<div style="flex: 1 1 320px; max-width: 420px">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin: 0 0 20px">Was Sie danach in der Hand haben</h2>
-<p style="margin: 0; color: #55504B">Alles als Ansicht zum Durchklicken und als Datei für den Datenraum.</p>
-</div>
-<dl style="flex: 1 1 560px; margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); border-top: 2px solid #1A1A1A">
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">ARR-Brücke</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">ARR zum Stichtag und alle Bewegungen der letzten zwölf Monate, je Kunde</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Kohorten</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">NRR, GRR und Kundenbindung je Startjahr</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Abgleich</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">Vertrag, Rechnung und Buchhaltung für jeden Monat</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Befundliste</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">jeder betroffene Datensatz mit HubSpot-ID und Betrag</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Neugeschäft und Plan</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">Abschlussquote, Verlustgründe und der Abgleich Ihres Businessplans mit den Zahlen der Vergangenheit</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Exporte</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">Dateien für Datenraum und Arbeitspapiere</dd>
-<dt style="font-weight: 700; font-stretch: 95%; padding: 14px 16px 14px 0; border-bottom: 1px solid #D9D4CD">Bereinigung</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D4CD">was vor der Prüfung in HubSpot korrigiert werden sollte, auf Wunsch von uns umgesetzt</dd>
-</dl>
-</div>
+<section class="facts">
+  <div class="wrap">
+    <p class="note">Ergebnis am Testdatensatz der Velmont Software GmbH, einer erfundenen Firma mit 590 aktiven Kunden, Stichtag 30.09.2026:</p>
+    <div class="kpis">
+      <div class="kpi"><div class="k">ARR</div><div class="v">11,49 Mio. €</div><div class="d">+799 T€ in zwölf Monaten</div></div>
+      <div class="kpi"><div class="k">Net Revenue Retention</div><div class="v">101,1 %</div><div class="d">Gross Revenue Retention 96,0 %</div></div>
+      <div class="kpi"><div class="k">Abstimmung der Brücke</div><div class="v acc"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>0,00 €</div><div class="d">auf beiden Rechenwegen</div></div>
+      <div class="kpi"><div class="k">Befunde mit hoher Wirkung</div><div class="v">42</div><div class="d">aus 23 Prüfregeln, jeder mit Datensatz</div></div>
+    </div>
+  </div>
 </section>
 
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-<section style="padding: clamp(64px, 8vw, 112px) 0">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin: 0 0 12px">Was die Gegenseite sonst zuerst findet</h2>
-<p style="margin: 0 0 40px; color: #55504B">Vier Befunde aus dem Testdatensatz.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px 28px">
-<div style="border-top: 2px solid #5E1A2B; padding-top: 16px"><div style="font-weight: 800; font-stretch: 112%; font-size: 40px; line-height: 1.05; color: #5E1A2B">147 T€</div><p style="margin: 10px 0 0; font-size: 16px">ARR aus neun aktiven Verträgen, zu denen es keine aktuelle Rechnung gibt</p></div>
-<div style="border-top: 2px solid #5E1A2B; padding-top: 16px"><div style="font-weight: 800; font-stretch: 112%; font-size: 40px; line-height: 1.05; color: #5E1A2B">36 T€</div><p style="margin: 10px 0 0; font-size: 16px">ARR zu viel, weil vier Vertragspositionen doppelt im CRM stehen</p></div>
-<div style="border-top: 2px solid #5E1A2B; padding-top: 16px"><div style="font-weight: 800; font-stretch: 112%; font-size: 40px; line-height: 1.05; color: #5E1A2B">169 T€</div><p style="margin: 10px 0 0; font-size: 16px">aus 23 Rechnungen an Debitoren, die es im CRM nicht gibt</p></div>
-<div style="border-top: 2px solid #5E1A2B; padding-top: 16px"><div style="font-weight: 800; font-stretch: 112%; font-size: 40px; line-height: 1.05; color: #5E1A2B">114 Deals</div><p style="margin: 10px 0 0; font-size: 16px">mit dem Gesamtvertragswert im Feld Betrag, wo die übrigen den Jahreswert haben</p></div>
-</div>
+<section class="band white" id="ablauf">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Wo ARRproof in einer Transaktion liegt</h2>
+      <p>Bevor die Gegenseite Fragen stellt, sind Ihre Zahlen belegt und die Lücken bekannt. Wer früh anfängt, hat Zeit, sie zu schließen.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Heute</b><span>Der Termin steht oder zeichnet sich ab.</span></li>
+      <li class="here"><b>ARRproof</b><span>Ich werte HubSpot, Rechnungen, Bank und Buchhaltung aus und lege die Befundliste vor.</span></li>
+      <li><b>Bereinigung</b><span>Was sich vorher korrigieren lässt, wird korrigiert, auf Wunsch von uns direkt in HubSpot.</span></li>
+      <li><b>Datenraum</b><span>Zahlen und Exporte liegen bereit, jede bis zum Beleg nachvollziehbar.</span></li>
+      <li><b>Due Diligence</b><span>Der Prüfer der Gegenseite arbeitet mit denselben Daten.</span></li>
+      <li><b>Signing</b><span>Offene Datenfragen sind bis dahin geklärt.</span></li>
+    </ol>
+  </div>
 </section>
 
-<section id="ablauf" style="padding: clamp(56px, 7vw, 96px) 0; border-top: 1px solid #D9D4CD">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin: 0 0 40px">Ablauf und Preis</h2>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px">
-<li><div style="font-weight: 800; font-stretch: 112%; font-size: 48px; line-height: 1; color: #5E1A2B">1</div><p style="margin: 12px 0 0; font-size: 16px">Erstgespräch über Anlass, Termin und Ihre Systeme. <span style="border: 1px dashed #8F877E; background: #F5F3EF; padding: 0 5px">[Dauer, kostenlos ja oder nein]</span></p></li>
-<li><div style="font-weight: 800; font-stretch: 112%; font-size: 48px; line-height: 1; color: #5E1A2B">2</div><p style="margin: 12px 0 0; font-size: 16px">Vertraulichkeitsvereinbarung, lesender Zugang zu HubSpot, Exporte aus ERP und Buchhaltung.</p></li>
-<li><div style="font-weight: 800; font-stretch: 112%; font-size: 48px; line-height: 1; color: #5E1A2B">3</div><p style="margin: 12px 0 0; font-size: 16px">Auswertung und Befundliste. <span style="border: 1px dashed #8F877E; background: #F5F3EF; padding: 0 5px">[Dauer]</span></p></li>
-<li><div style="font-weight: 800; font-stretch: 112%; font-size: 48px; line-height: 1; color: #5E1A2B">4</div><p style="margin: 12px 0 0; font-size: 16px">Wir besprechen die Ergebnisse, danach übergebe ich alle Unterlagen.</p></li>
-</ol>
-<p style="margin: 40px 0 0; padding-top: 20px; border-top: 2px solid #1A1A1A; font-weight: 600">Preis: <span style="border: 1px dashed #8F877E; background: #F5F3EF; padding: 0 6px; font-weight: 400">[Festpreis oder Spanne]</span></p>
+<section class="band" id="werkzeug">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Jede Zahl mit Herkunft</h2>
+      <p>Mein Werkzeug führt CRM, Rechnungen, Bank und Buchhaltung zusammen. Wer auf eine Bewegung im ARR klickt, sieht den Weg über Vertrag und Position bis zu Rechnung und Zahlung und ob die Beträge zueinander passen.</p>
+    </div>
+    <figure class="shot" style="margin:0">
+      <img src="img/app-herkunft.webp" width="1600" height="1000" alt="ARRproof: ARR-Brücke über zwölf Monate mit Kennzahlen, rechts der Herkunftspfad einer Bewegung von Vertrag über Position und Rechnung bis zur Zahlung, Testdatensatz">
+    </figure>
+    <p class="figcap">Die ARR-Brücke des Testdatensatzes. Rechts der Weg einer Bewegung bis zur Zahlung.</p>
+  </div>
 </section>
 
-<section style="padding: clamp(56px, 7vw, 96px) 0; border-top: 1px solid #D9D4CD; display: flex; flex-wrap: wrap; gap: 32px 64px">
-<div style="flex: 1 1 420px">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; margin: 0 0 16px">Für Prüfer und Investoren</h2>
-<p style="margin: 0">Ist schon ein Prüfer beauftragt, arbeite ich ihm zu. Jede Zahl lässt sich bis zum Beleg nachvollziehen und als Datei übernehmen. Das Urteil bleibt beim Prüfer, CogniCore ist keine Wirtschaftsprüfungsgesellschaft.</p>
-</div>
-<div style="flex: 1 1 420px; display: flex; flex-wrap: wrap; gap: 20px 28px">
-<div style="flex: 0 0 160px; height: 192px; border: 1px dashed #8F877E; background: #F5F3EF; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 14px; color: #55504B; padding: 12px; box-sizing: border-box">[Foto Dominik Siegers]</div>
-<div style="flex: 1 1 220px">
-<h2 style="font-weight: 700; font-stretch: 112%; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; margin: 0 0 16px">Wer dahinter steht</h2>
-<p style="margin: 0 0 12px">Dominik Siegers, Geschäftsführer der CogniCore IT Solutions GmbH in Köln, HubSpot Solutions Partner und Microsoft Partner.</p>
-<p style="margin: 0; font-size: 16px"><span style="border: 1px dashed #8F877E; background: #F5F3EF; padding: 0 5px">[Ein, zwei Sätze zu Ihrer Erfahrung]</span></p>
-</div>
-</div>
-</section>
-</div>
-
-<section id="kontakt" style="background: #5E1A2B; color: #FFFFFF; padding: clamp(64px, 9vw, 128px) 0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-<h2 style="font-weight: 800; font-stretch: 112%; font-size: clamp(38px, 5.6vw, 76px); line-height: 1.02; letter-spacing: -0.015em; margin: 0; max-width: 14ch">Nennen Sie mir Ihren Stichtag.</h2>
-<p style="margin: 24px 0 36px; max-width: 520px; font-size: 20px; color: rgba(255,255,255,0.9)">Ich sage Ihnen, was bis dahin machbar ist.</p>
-<a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; background: #FFFFFF; color: #5E1A2B; text-decoration: none; font-weight: 700">dominik.siegers@cognicore.de</a>
-</div>
+<section class="band white">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Was Sie danach in der Hand haben</h2>
+      <p>Alles als Ansicht zum Durchgehen im Termin und als Datei für Datenraum und Arbeitspapiere.</p>
+    </div>
+    <dl class="deliv">
+      <div><dt>ARR-Brücke</dt><dd>ARR zum Stichtag und alle Bewegungen der letzten zwölf Monate, je Kunde</dd></div>
+      <div><dt>Kohorten</dt><dd>NRR, GRR und Kundenbindung je Startjahr</dd></div>
+      <div><dt>Abgleich</dt><dd>Vertrag, Rechnung und Buchhaltung für jeden Monat</dd></div>
+      <div><dt>Befundliste</dt><dd>jeder betroffene Datensatz mit HubSpot-ID und Betrag</dd></div>
+      <div><dt>Neugeschäft und Plan</dt><dd>Abschlussquote, Verlustgründe und der Abgleich Ihres Businessplans mit den Zahlen der Vergangenheit</dd></div>
+      <div><dt>Exporte</dt><dd>Dateien für Datenraum und Arbeitspapiere</dd></div>
+      <div><dt>Bereinigung</dt><dd>was vor der Prüfung in HubSpot korrigiert werden sollte, auf Wunsch von uns umgesetzt</dd></div>
+      <div><dt>Herkunft</dt><dd>für jeden Kunden der Weg von der Zahl bis zum Beleg</dd></div>
+    </dl>
+  </div>
 </section>
 
-<footer style="max-width: 1240px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 48px) 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; font-size: 14px; color: #55504B">
-<span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen stammen aus einem synthetischen Testdatensatz.</span>
-<span style="display: flex; gap: 20px"><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></span>
+<section class="band">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Was die Gegenseite sonst zuerst findet</h2>
+      <p>Vier Befunde aus dem Testdatensatz. In einer Due Diligence wird über jeden davon gesprochen, wenn ihn die Gegenseite zuerst findet.</p>
+    </div>
+    <div class="finds">
+      <div class="find"><span class="rtag">R03 Fakturierungslücke</span><div class="amt">147 T€</div><p>ARR aus neun aktiven Verträgen, zu denen es keine aktuelle Rechnung gibt</p></div>
+      <div class="find"><span class="rtag">R02 doppelte Positionen</span><div class="amt">36 T€</div><p>ARR zu viel, weil vier Vertragspositionen doppelt im CRM stehen</p></div>
+      <div class="find"><span class="rtag">R06 Debitor ohne CRM-Firma</span><div class="amt">169 T€</div><p>aus 23 Rechnungen an Debitoren, die es im CRM nicht gibt</p></div>
+      <div class="find"><span class="rtag">R11 Betrag als TCV</span><div class="amt">114 Deals</div><p>mit dem Gesamtvertragswert im Feld Betrag, wo die übrigen den Jahreswert haben</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <div class="sh">
+      <h2>So läuft es ab</h2>
+      <p>Sie brauchen dafür keine neue Software. Ich arbeite mit Lesezugriff auf HubSpot und Exporten aus Ihren Systemen.</p>
+    </div>
+    <ol class="flow">
+      <li><p>Erstgespräch über Anlass, Termin und Ihre Systeme.</p></li>
+      <li><p>Vertraulichkeitsvereinbarung, lesender Zugang zu HubSpot, Exporte aus ERP und Buchhaltung.</p></li>
+      <li><p>Ich werte aus und lege Ihnen die Befundliste vor.</p></li>
+      <li><p>Wir gehen die Ergebnisse gemeinsam durch, danach bekommen Sie alle Unterlagen für den Datenraum.</p></li>
+    </ol>
+    <p class="price">Den Preis nenne ich Ihnen nach dem Erstgespräch. Er richtet sich danach, wie viele Verträge und Systeme zusammenkommen.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sh" style="margin-bottom:0">
+      <h2>Für Prüfer und Investoren</h2>
+      <p>Ist schon ein Prüfer beauftragt, arbeite ich ihm zu. Jede Zahl lässt sich bis zum Beleg nachvollziehen und als Datei übernehmen. Das Urteil bleibt beim Prüfer, CogniCore ist keine Wirtschaftsprüfungsgesellschaft.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band white" id="ueber-mich">
+  <div class="wrap me">
+    <img src="img/dominik-siegers.webp" width="800" height="800" alt="Dominik Siegers" loading="lazy">
+    <div>
+      <div class="label">Über mich</div>
+      <h2>Dominik Siegers</h2>
+      <p>Seit 2020 begleite ich als geschäftsführender Gesellschafter der CogniCore IT Solutions GmbH in Köln kleine und mittlere Unternehmen dabei, ihre Abläufe einfacher und planbarer zu machen. Mein Schwerpunkt liegt dort, wo Prozesse, Menschen und digitale Werkzeuge zusammenkommen.</p>
+      <p>Für ARRproof nutze ich ein eigenes Werkzeug, das CRM, Rechnungen, Bank und Buchhaltung zusammenführt und jede Zahl bis zum Beleg zurückverfolgt.</p>
+      <div class="tags"><span>HubSpot Solutions Partner</span><span>Microsoft Partner</span><span>Köln</span><span>Berater seit 2020</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <h2>Nennen Sie mir Ihren Stichtag.</h2>
+    <p>Ich sage Ihnen, was bis dahin machbar ist.</p>
+    <div class="cta">
+      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
+      <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag">dominik.siegers@cognicore.de</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen und Bildschirmfotos stammen aus einem synthetischen Testdatensatz.</span>
+    <nav aria-label="Weitere Seiten"><a href="fakten/">Fakten zu ARRproof</a><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></nav>
+  </div>
 </footer>
 
-</div>
 </body>
 </html>
