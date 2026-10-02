@@ -18,7 +18,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="ARRproof · Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.">
 <meta property="og:description" content="ARR-Prüfung für Softwarehäuser mit HubSpot, jede Zahl bis zu Vertrag, Rechnung und Zahlung. Eine Leistung der CogniCore IT Solutions GmbH.">
-<meta property="og:image" content="https://arrproof.com/img/app-herkunft.webp">
+<meta property="og:image" content="https://arrproof.com/img/og-arrproof-de.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
 <link rel="icon" href="brand/arrproof/svg/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="brand/arrproof/favicon.ico" sizes="16x16 32x32 48x48">
@@ -183,6 +185,17 @@ section.band.white .conf div{background:var(--bg)}
 /* Hinweis für Prüfer und Investoren */
 .aside-note{margin-top:28px;padding:18px 20px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-size:15.5px;max-width:62em}
 .aside-note b{color:var(--ink)}
+/* Erklärgrafiken */
+.topics{display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
+.topic{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.topic.flip .fig{order:2}
+.fig{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 20px 14px;max-width:560px;width:100%}
+section.band.white .fig{background:var(--bg)}
+.fig svg{display:block;width:100%;height:auto;font-family:var(--f-text)}
+.fig figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.topic h3{font-size:clamp(22px,2.4vw,28px);font-weight:700;line-height:1.15;margin-bottom:12px}
+.topic p+p{margin-top:12px}
+.kpis.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:1020px){
   .hero .wrap,.sh,.me{grid-template-columns:minmax(0,1fr)}
   .kpis,.finds,.flow,.conf{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -210,6 +223,8 @@ section.band.white .conf div{background:var(--bg)}
 @media (max-width:900px){.top nav{gap:4px 16px;font-size:14px}.top nav a.btn,.top .btn{padding:0 14px;font-size:14px}}
 @media (max-width:560px){.top .wrap{gap:8px 12px}}
 @media (max-width:360px){.top nav a.btn,.top .btn{padding:0 10px}}
+@media (max-width:1020px){.topic{grid-template-columns:minmax(0,1fr)}.topic.flip .fig{order:0}}
+@media (max-width:560px){.fig{padding:12px 12px 10px}.kpis.two{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -220,7 +235,7 @@ section.band.white .conf div{background:var(--bg)}
     <a class="wm" href="#top" aria-label="ARRproof, zur Startseite"><img class="brand-logo" src="brand/arrproof/svg/arrproof-logo.svg" alt="ARRproof" width="952" height="208"></a>
     <nav aria-label="Seitenbereiche">
       <a href="#ablauf">Ablauf</a>
-      <a href="#werkzeug">Werkzeug</a>
+      <a href="#themen">Themen</a>
       <a href="#vertraulichkeit">Vertraulichkeit</a>
       <a href="#ueber-mich">Über mich</a>
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
@@ -238,7 +253,7 @@ section.band.white .conf div{background:var(--bg)}
       <div class="cta">
         <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
         <a class="btn sec" href="checkliste/">Checkliste: Was Käufer prüfen</a>
-        <span class="alt">oder schreiben Sie mir an <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
+        <span class="alt">oder schreiben Sie mir an <a href="mailto:dominik@arrproof.com?subject=ARRproof">dominik@arrproof.com</a></span>
       </div>
       <div class="byline"><img src="img/dominik-siegers.webp" width="88" height="88" alt=""><p><a href="#ueber-mich">Dominik Siegers</a>. Ich habe selbst ein IT-Systemhaus geführt und als Investment Manager auf der Seite der Investoren gearbeitet.</p></div>
     </div>
@@ -287,16 +302,26 @@ section.band.white .conf div{background:var(--bg)}
   </div>
 </section>
 
-<section class="band" id="werkzeug">
+<section class="band" id="themen">
   <div class="wrap">
     <div class="sh">
-      <h2>Jede Zahl mit Herkunft</h2>
-      <p>Mein Werkzeug führt CRM, Rechnungen, Bank und Buchhaltung zusammen. Wer auf eine Bewegung im ARR klickt, sieht den Weg über Vertrag und Position bis zu Rechnung und Zahlung und ob die Beträge zueinander passen.</p>
+      <h2>Worauf ich bei Ihrem ARR schaue</h2>
+      <p>Drei Stellen, an denen ich bei gewachsenen Softwarehäusern zuerst nachsehe, weil ein Käufer dort am genauesten hinschaut.</p>
     </div>
-    <figure class="shot" style="margin:0">
-      <img src="img/app-herkunft.webp" width="1600" height="1000" alt="ARRproof: ARR-Brücke über zwölf Monate mit Kennzahlen, rechts der Herkunftspfad einer Bewegung von Vertrag über Position und Rechnung bis zur Zahlung, Testdatensatz">
-    </figure>
-    <p class="figcap">Die ARR-Brücke des Testdatensatzes. Rechts der Weg einer Bewegung bis zur Zahlung.</p>
+    <div class="topics">
+      <div class="topic">
+        <figure class="fig"><svg viewBox="0 0 440 318" role="img" aria-labelledby="g1de"><title id="g1de">Schematische ARR-Brücke: vom ARR am Anfang über Neukunden, Wechsel aus der Pflege, Ausbau nach Menge und Preis, Reduzierung und Kündigung zum ARR am Ende</title><line x1="178" y1="12" x2="178" y2="292" stroke="#DEDED8" stroke-width="1.5"/><path d="M172 300 l6 -6 l6 6" fill="none" stroke="#DEDED8" stroke-width="1.5"/><text x="0" y="30" font-size="17" fill="#17191C" font-weight="600">ARR Anfang</text><rect x="178.0" y="14" width="80.0" height="22" rx="3" fill="#17191C"/><line x1="258.0" y1="36" x2="258.0" y2="49" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="65" font-size="17" fill="#17191C">Neukunden</text><rect x="258.0" y="49" width="64.0" height="22" rx="3" fill="#0F7B5F"/><line x1="322.0" y1="71" x2="322.0" y2="84" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="100" font-size="17" fill="#17191C">Wechsel aus Pflege</text><rect x="322.0" y="84" width="48.0" height="22" rx="3" fill="#B7812A"/><line x1="370.0" y1="106" x2="370.0" y2="119" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="135" font-size="17" fill="#17191C">Ausbau Menge</text><rect x="370.0" y="119" width="35.2" height="22" rx="3" fill="#0F7B5F"/><line x1="405.2" y1="141" x2="405.2" y2="154" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="170" font-size="17" fill="#17191C">Ausbau Preis</text><rect x="405.2" y="154" width="25.6" height="22" rx="3" fill="#7CC0A8"/><line x1="430.8" y1="176" x2="430.8" y2="189" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="205" font-size="17" fill="#17191C">Reduzierung</text><rect x="411.6" y="189" width="19.2" height="22" rx="3" fill="#B4553A"/><line x1="411.6" y1="211" x2="411.6" y2="224" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="240" font-size="17" fill="#17191C">Kündigung</text><rect x="366.8" y="224" width="44.8" height="22" rx="3" fill="#B4553A"/><line x1="366.8" y1="246" x2="366.8" y2="259" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="3 3"/><text x="0" y="275" font-size="17" fill="#17191C" font-weight="600">ARR Ende</text><rect x="178.0" y="259" width="188.8" height="22" rx="3" fill="#17191C"/></svg><figcaption>Schematische Darstellung</figcaption></figure>
+        <div><h3>Die ARR-Brücke</h3><p>Die Brücke zeigt, wie aus dem ARR von vor zwölf Monaten der ARR von heute wird, mit Neukunden, Ausbau, Reduzierung und Kündigungen. Ein Käufer liest daraus, woher das Wachstum kommt.</p><p>Verzerrt wird sie gern an zwei Stellen. Wechselt ein Pflegekunde ins Abo, zählt er schnell als Neukunde. Und eine Preiserhöhung landet im selben Topf wie zusätzliche Lizenzen. Ich trenne beides und rechne die Brücke auf zwei Wegen, bis sie ohne Rest aufgeht.</p></div>
+      </div>
+      <div class="topic flip">
+        <figure class="fig"><svg viewBox="0 0 440 300" role="img" aria-labelledby="g2de"><title id="g2de">Schematische Kohortenkurve: derselbe Jahrgang, einmal nach Vertragsbeginn und einmal nach dem CRM-Feld Kunde seit gebildet, zeigt einen anderen Verlauf</title><line x1="44" y1="136.0" x2="432" y2="136.0" stroke="#DEDED8" stroke-width="1"/><line x1="44" y1="200.0" x2="432" y2="200.0" stroke="#B9BCB6" stroke-width="1.2" stroke-dasharray="4 4"/><text x="38" y="141.0" font-size="14" fill="#5E626A" text-anchor="end">120 %</text><text x="38" y="205.0" font-size="14" fill="#5E626A" text-anchor="end">100 %</text><polyline fill="none" stroke="#0F7B5F" stroke-width="3" points="78,200.0 163,158.4 248,142.4 333,132.8 418,126.4"/><polyline fill="none" stroke="#5E626A" stroke-width="3" stroke-dasharray="7 6" points="78,200.0 163,190.4 248,203.2 333,212.8 418,216.0"/><circle cx="78" cy="200.0" r="4.5" fill="#0F7B5F"/><circle cx="163" cy="158.4" r="4.5" fill="#0F7B5F"/><circle cx="248" cy="142.4" r="4.5" fill="#0F7B5F"/><circle cx="333" cy="132.8" r="4.5" fill="#0F7B5F"/><circle cx="418" cy="126.4" r="4.5" fill="#0F7B5F"/><circle cx="78" cy="200.0" r="4.5" fill="#FFFFFF" stroke="#5E626A" stroke-width="2"/><circle cx="163" cy="190.4" r="4.5" fill="#FFFFFF" stroke="#5E626A" stroke-width="2"/><circle cx="248" cy="203.2" r="4.5" fill="#FFFFFF" stroke="#5E626A" stroke-width="2"/><circle cx="333" cy="212.8" r="4.5" fill="#FFFFFF" stroke="#5E626A" stroke-width="2"/><circle cx="418" cy="216.0" r="4.5" fill="#FFFFFF" stroke="#5E626A" stroke-width="2"/><text x="78" y="272" font-size="16" fill="#5E626A" text-anchor="middle">Start</text><text x="163" y="272" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 1</text><text x="248" y="272" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 2</text><text x="333" y="272" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 3</text><text x="418" y="272" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 4</text><line x1="44" y1="22" x2="74" y2="22" stroke="#0F7B5F" stroke-width="3"/><text x="82" y="27" font-size="17" fill="#17191C">aus den Verträgen</text><line x1="44" y1="48" x2="74" y2="48" stroke="#5E626A" stroke-width="3" stroke-dasharray="7 6"/><text x="82" y="53" font-size="17" fill="#17191C">aus „Kunde seit“</text></svg><figcaption>Schematische Darstellung</figcaption></figure>
+        <div><h3>Kohorten und Net Revenue Retention</h3><p>Bleiben Kunden, und kaufen sie mit der Zeit mehr? Dafür werden sie nach dem Jahr ihres Starts gruppiert, und man verfolgt den Umsatz jedes Jahrgangs.</p><p>Der Start muss aus den Verträgen kommen. Das Feld „Kunde seit“ im CRM ist in gewachsenen Portalen selten verlässlich gepflegt. Wer danach gruppiert, mischt Kunden in den falschen Jahrgang, und die Kurve erzählt eine andere Geschichte.</p></div>
+      </div>
+      <div class="topic">
+        <figure class="fig"><svg viewBox="0 0 440 318" role="img" aria-labelledby="g3de"><title id="g3de">Schematischer Abgleich je Kunde von Vertrag, Rechnung und Zahlung, dazu je Monat Rechnungen gegen die Erlöskonten der Buchhaltung</title><text x="262" y="22" font-size="15" font-weight="600" fill="#17191C" text-anchor="middle">Vertrag</text><text x="332" y="22" font-size="15" font-weight="600" fill="#17191C" text-anchor="middle">Rechnung</text><text x="402" y="22" font-size="15" font-weight="600" fill="#17191C" text-anchor="middle">Zahlung</text><line x1="262" y1="64" x2="402" y2="64" stroke="#DEDED8" stroke-width="2"/><text x="0" y="61" font-size="16" font-weight="600" fill="#17191C">Kunde A</text><text x="0" y="81" font-size="14" fill="#0F7B5F">passt durchgehend</text><circle cx="262" cy="64" r="14" fill="#0F7B5F"/><path d="M256 64 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="332" cy="64" r="14" fill="#0F7B5F"/><path d="M326 64 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="402" cy="64" r="14" fill="#0F7B5F"/><path d="M396 64 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><line x1="262" y1="120" x2="402" y2="120" stroke="#DEDED8" stroke-width="2"/><text x="0" y="117" font-size="16" font-weight="600" fill="#17191C">Kunde B</text><text x="0" y="137" font-size="14" fill="#8A4A12">Zahlung über 90 Tage offen</text><circle cx="262" cy="120" r="14" fill="#0F7B5F"/><path d="M256 120 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="332" cy="120" r="14" fill="#0F7B5F"/><path d="M326 120 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="402" cy="120" r="14" fill="#FBEEDD" stroke="#8A4A12" stroke-width="2"/><path d="M402 113 v8" stroke="#8A4A12" stroke-width="2.6" stroke-linecap="round"/><circle cx="402" cy="126" r="1.7" fill="#8A4A12"/><line x1="262" y1="176" x2="402" y2="176" stroke="#DEDED8" stroke-width="2"/><text x="0" y="173" font-size="16" font-weight="600" fill="#17191C">Kunde C</text><text x="0" y="193" font-size="14" fill="#B4553A">Vertrag ohne Rechnung</text><circle cx="262" cy="176" r="14" fill="#0F7B5F"/><path d="M256 176 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="332" cy="176" r="14" fill="#FFFFFF" stroke="#B4553A" stroke-width="2"/><path d="M327 171 l10 10 M337 171 l-10 10" stroke="#B4553A" stroke-width="2.4" stroke-linecap="round"/><circle cx="402" cy="176" r="14" fill="#FFFFFF" stroke="#B4553A" stroke-width="2"/><path d="M397 171 l10 10 M407 171 l-10 10" stroke="#B4553A" stroke-width="2.4" stroke-linecap="round"/><line x1="262" y1="232" x2="402" y2="232" stroke="#DEDED8" stroke-width="2"/><text x="0" y="229" font-size="16" font-weight="600" fill="#17191C">Kunde D</text><text x="0" y="249" font-size="14" fill="#B4553A">Rechnung ohne Vertrag</text><circle cx="262" cy="232" r="14" fill="#FFFFFF" stroke="#B4553A" stroke-width="2"/><path d="M257 227 l10 10 M267 227 l-10 10" stroke="#B4553A" stroke-width="2.4" stroke-linecap="round"/><circle cx="332" cy="232" r="14" fill="#0F7B5F"/><path d="M326 232 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="402" cy="232" r="14" fill="#0F7B5F"/><path d="M396 232 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="0" y="274" width="440" height="40" rx="8" fill="#E6F2EC"/><text x="14" y="299" font-size="15" fill="#17191C">Je Monat: Rechnungen gegen Erlöskonten</text><circle cx="410" cy="294" r="11" fill="#0F7B5F"/><path d="M404 294 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption>Schematische Darstellung</figcaption></figure>
+        <div><h3>Vertrag, Rechnung, Zahlung, Buchhaltung</h3><p>Der ARR steht im Vertrag. Ob er auch berechnet, bezahlt und gebucht wurde, zeigt erst der Abgleich, Kunde für Kunde und Monat für Monat.</p><p>Wo es auseinanderläuft, suche ich den Grund: Verträge ohne Rechnung, Rechnungen ohne Vertrag, offene Zahlungen, manuelle Buchungen. Jede Lücke kommt mit Datensatz und Betrag in die Befundliste, damit Sie die Erklärung haben, bevor jemand fragt.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -341,12 +366,16 @@ section.band.white .conf div{background:var(--bg)}
       <h2>Wie viel ARR an Pflegeverträgen hängt</h2>
       <p>Bei gewachsenen Softwarehäusern haben oft noch Kunden eine Kauflizenz mit Pflegevertrag neben dem Abo. Ob ein Käufer diese Pflege als wiederkehrenden Umsatz anerkennt, ist eine Bewertungsfrage. Ich rechne alles mit und ohne Pflege und zeige, wie der Bestand bisher ins Abo gewechselt ist.</p>
     </div>
-    <p class="note">Im Testdatensatz, Stichtag 30.09.2026:</p>
-    <div class="kpis">
+    <div class="topic">
+      <figure class="fig"><svg viewBox="0 0 440 300" role="img" aria-labelledby="g4de"><title id="g4de">Schematischer Kundenbestand je Jahr: der Anteil mit Abo wächst, der Bestand nur mit Pflege oder Hosting schrumpft</title><rect x="0" y="12" width="16" height="16" rx="3" fill="#0F7B5F"/><text x="24" y="26" font-size="17" fill="#17191C">Kunden mit Abo</text><rect x="0" y="38" width="16" height="16" rx="3" fill="#B7812A"/><text x="24" y="52" font-size="17" fill="#17191C">nur Pflege oder Hosting</text><rect x="14" y="237.0" width="46" height="15.0" fill="#0F7B5F"/><rect x="14" y="100.0" width="46" height="135.0" fill="#B7812A"/><text x="37.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 1</text><rect x="86" y="207.8" width="46" height="44.2" fill="#0F7B5F"/><rect x="86" y="92.0" width="46" height="113.8" fill="#B7812A"/><text x="109.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 2</text><rect x="158" y="178.2" width="46" height="73.8" fill="#0F7B5F"/><rect x="158" y="86.0" width="46" height="90.2" fill="#B7812A"/><text x="181.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 3</text><rect x="230" y="150.0" width="46" height="102.0" fill="#0F7B5F"/><rect x="230" y="80.0" width="46" height="68.0" fill="#B7812A"/><text x="253.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 4</text><rect x="302" y="125.3" width="46" height="126.7" fill="#0F7B5F"/><rect x="302" y="74.0" width="46" height="49.3" fill="#B7812A"/><text x="325.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">Jahr 5</text><rect x="374" y="106.4" width="46" height="145.6" fill="#0F7B5F"/><rect x="374" y="68.0" width="46" height="36.4" fill="#B7812A"/><text x="397.0" y="276" font-size="16" fill="#5E626A" text-anchor="middle">heute</text><line x1="0" y1="252" x2="440" y2="252" stroke="#DEDED8" stroke-width="1.5"/></svg><figcaption>Schematische Darstellung</figcaption></figure>
+      <div><p class="note">Im Testdatensatz, Stichtag 30.09.2026:</p>
+    <div class="kpis two">
       <div class="kpi"><div class="k">Kunden nur mit Pflege oder Hosting</div><div class="v">120</div><div class="d">20 % der aktiven Kunden</div></div>
       <div class="kpi"><div class="k">ARR dieser Kunden</div><div class="v">1,72 Mio. €</div><div class="d">14,9 % des ARR</div></div>
       <div class="kpi"><div class="k">Wechsel ins Abo</div><div class="v">213</div><div class="d">seit 2016, davon 15 in den letzten zwölf Monaten</div></div>
       <div class="kpi"><div class="k">Aufschlag beim Wechsel</div><div class="v">1,60×</div><div class="d">Abo-MRR nach zwölf Monaten zur Pflege vorher, Median</div></div>
+    </div>
+      </div>
     </div>
   </div>
 </section>
@@ -355,7 +384,7 @@ section.band.white .conf div{background:var(--bg)}
   <div class="wrap">
     <div class="sh">
       <h2>So läuft es ab</h2>
-      <p>Sie brauchen dafür keine neue Software. Ich arbeite mit Lesezugriff auf HubSpot und Exporten aus Ihren Systemen.</p>
+      <p>Sie brauchen dafür keine neue Software. Ich arbeite mit Lesezugriff auf HubSpot und Exporten aus Ihren Systemen. Ausgewertet wird mit meinem eigenen Werkzeug, so ist jede Zahl reproduzierbar.</p>
     </div>
     <ol class="flow">
       <li><p>Erstgespräch über Anlass, Termin und Ihre Systeme.</p></li>
@@ -403,7 +432,7 @@ section.band.white .conf div{background:var(--bg)}
     <p>Vom Datenzugang bis zur Befundliste rechne ich mit zwei bis drei Wochen. Ich sage Ihnen, was bis zu Ihrem Stichtag machbar ist.</p>
     <div class="cta">
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
-      <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag">dominik.siegers@cognicore.de</a>
+      <a class="mail" href="mailto:dominik@arrproof.com?subject=ARRproof%3A%20Stichtag">dominik@arrproof.com</a>
     </div>
   </div>
 </section>
@@ -411,7 +440,7 @@ section.band.white .conf div{background:var(--bg)}
 
 <footer>
   <div class="wrap">
-    <span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen und Bildschirmfotos stammen aus einem synthetischen Testdatensatz.</span>
+    <span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen stammen aus einem synthetischen Testdatensatz, die Grafiken sind schematisch.</span>
     <nav aria-label="Weitere Seiten"><a href="checkliste/">Checkliste</a><a href="fakten/">Fakten zu ARRproof</a><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></nav>
   </div>
 </footer>
