@@ -3,11 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Sprache: gespeicherte Wahl gilt, sonst beim Einstieg die primäre Browsersprache (de* = Deutsch, sonst Englisch). Interne Klicks leiten nicht um. */
+(function(){var P='de',A='../en/facts/',k='arrproof-lang',p=null,i=false;try{p=localStorage.getItem(k)}catch(e){}try{i=!!document.referrer&&new URL(document.referrer).host===location.host}catch(e){}if(!p&&i)return;var n=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=p||(n.slice(0,2)==='de'?'de':'en');if(w!==P)location.replace(A)})();
+</script>
 <title>Fakten zu ARRproof · CogniCore</title>
 <meta name="description" content="Fakten zu ARRproof, der Prüfung des wiederkehrenden Umsatzes von Softwarehäusern mit HubSpot vor einer Financial Due Diligence: Kerndaten, Datenzugriff, Methode, Abgrenzung, Anbieter und häufige Fragen.">
 <!-- Wie die Startseite: nicht indexieren, bis Name, Marke und Angebot geklärt sind -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://arrproof.com/fakten/">
+<link rel="alternate" hreflang="de" href="https://arrproof.com/fakten/">
+<link rel="alternate" hreflang="en" href="https://arrproof.com/en/facts/">
+<link rel="alternate" hreflang="x-default" href="https://arrproof.com/en/facts/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fakten zu ARRproof">
 <meta property="og:description" content="Kerndaten, Datenzugriff, Methode, Abgrenzung und häufige Fragen zu ARRproof, einer Leistung der CogniCore IT Solutions GmbH.">
@@ -51,7 +58,7 @@
       "url": "https://arrproof.com/",
       "name": "ARRproof",
       "publisher": { "@id": "https://arrproof.com/#organization" },
-      "inLanguage": "de"
+      "inLanguage": ["de", "en"]
     },
     {
       "@type": "Service",
@@ -76,7 +83,7 @@
       "about": { "@id": "https://arrproof.com/#service" },
       "publisher": { "@id": "https://arrproof.com/#organization" },
       "datePublished": "2026-10-01",
-      "dateModified": "2026-10-01",
+      "dateModified": "2026-10-02",
       "mainEntity": [
         { "@type": "Question", "name": "Was ist ARRproof?", "acceptedAnswer": { "@type": "Answer", "text": "ARRproof ist eine Beratungsleistung der CogniCore IT Solutions GmbH aus Köln. ARRproof prüft den wiederkehrenden Umsatz (ARR) eines Softwarehauses, bevor ein Käufer, Investor oder Prüfer es tut. ARRproof gleicht den ARR mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab und führt jede Zahl bis zum einzelnen Beleg zurück." } },
         { "@type": "Question", "name": "Für wen ist ARRproof gedacht?", "acceptedAnswer": { "@type": "Answer", "text": "ARRproof richtet sich an Geschäftsführung und CFO von Softwarehäusern mit Abo-Geschäft, die HubSpot als CRM nutzen. Daneben arbeitet ARRproof Prüfern und Investoren zu, die eine Datenaufbereitung für ein Mandat brauchen." } },
@@ -167,10 +174,18 @@ footer nav{display:flex;gap:20px}
   dl.kv dt{border-bottom:0;padding-bottom:0}
   .cols{grid-template-columns:minmax(0,1fr)}
 }
+/* Sprachumschalter */
+.langbar{background:var(--bg);border-bottom:1px solid var(--border-2)}
+.langbar .wrap{max-width:1180px;display:flex;justify-content:flex-end;align-items:center;min-height:34px}
+.lang{display:inline-flex;gap:2px;padding:2px;border:1px solid var(--border);border-radius:7px;background:var(--surface)}
+.lang a{font-size:12px;font-weight:700;letter-spacing:.06em;line-height:1;padding:5px 8px;border-radius:5px;text-decoration:none;color:var(--muted)}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current]{background:var(--ink);color:#fff}
 </style>
 </head>
 <body>
 
+<div class="langbar"><div class="wrap"><nav class="lang" aria-label="Sprache wählen"><a href="./" hreflang="de" lang="de" data-lang="de" title="Deutsch" aria-current="page">DE</a><a href="../en/facts/" hreflang="en" lang="en" data-lang="en" title="English">EN</a></nav></div></div>
 <header class="top">
   <div class="wrap">
     <a class="wm" href="../" aria-label="ARRproof, zur Startseite"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
@@ -189,7 +204,7 @@ footer nav{display:flex;gap:20px}
       <h1>Fakten zu ARRproof</h1>
       <p>ARRproof ist eine Beratungsleistung der CogniCore IT Solutions GmbH aus Köln. ARRproof prüft den wiederkehrenden Umsatz (ARR) eines Softwarehauses, bevor ein Käufer, Investor oder Prüfer es tut. ARRproof gleicht den ARR mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab und führt jede Zahl bis zum einzelnen Beleg zurück.</p>
       <p>ARRproof richtet sich an Softwarehäuser mit Abo-Geschäft, die HubSpot als CRM nutzen. ARRproof ist kein Produkt der HubSpot, Inc. und keine Wirtschaftsprüfung.</p>
-      <p class="stamp">Erstellt: 1. Oktober 2026 · Aktualisiert: 1. Oktober 2026</p>
+      <p class="stamp">Erstellt: 1. Oktober 2026 · Aktualisiert: 2. Oktober 2026</p>
     </div>
 
     <section aria-labelledby="kerndaten">
@@ -319,5 +334,6 @@ footer nav{display:flex;gap:20px}
   </div>
 </footer>
 
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a){try{localStorage.setItem('arrproof-lang',a.getAttribute('data-lang'))}catch(x){}}});</script>
 </body>
 </html>

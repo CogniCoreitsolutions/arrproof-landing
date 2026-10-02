@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
 /* Sprache: gespeicherte Wahl gilt, sonst beim Einstieg die primäre Browsersprache (de* = Deutsch, sonst Englisch). Interne Klicks leiten nicht um. */
-(function(){var P='de',A='en/',k='arrproof-lang',p=null,i=false;try{p=localStorage.getItem(k)}catch(e){}try{i=!!document.referrer&&new URL(document.referrer).host===location.host}catch(e){}if(!p&&i)return;var n=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=p||(n.slice(0,2)==='de'?'de':'en');if(w!==P)location.replace(A)})();
+(function(){var P='en',A='../',k='arrproof-lang',p=null,i=false;try{p=localStorage.getItem(k)}catch(e){}try{i=!!document.referrer&&new URL(document.referrer).host===location.host}catch(e){}if(!p&&i)return;var n=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=p||(n.slice(0,2)==='de'?'de':'en');if(w!==P)location.replace(A)})();
 </script>
-<title>ARRproof · Ihren ARR prüfen, bevor es der Käufer tut</title>
-<meta name="description" content="Vor Verkauf, Nachfolge, Investoreneinstieg oder Finanzierungsrunde gleicht Dominik Siegers von CogniCore aus Köln den wiederkehrenden Umsatz von Softwarehäusern mit HubSpot gegen Verträge, Rechnungen, Zahlungseingänge und Buchhaltung ab. Jede Zahl mit Herkunft.">
-<!-- Bis Name, Marke und Angebot geklärt sind: nicht indexieren -->
+<title>ARRproof · Check your ARR before the buyer does</title>
+<meta name="description" content="Before a sale, succession, investor entry or funding round, Dominik Siegers of CogniCore in Cologne reconciles the recurring revenue of software companies using HubSpot with contracts, invoices, incoming payments and the books. Every number with its source.">
+<!-- Not indexed until name, trademark and offer are settled -->
 <meta name="robots" content="noindex, nofollow">
-<link rel="canonical" href="https://arrproof.com/">
+<link rel="canonical" href="https://arrproof.com/en/">
 <link rel="alternate" hreflang="de" href="https://arrproof.com/">
 <link rel="alternate" hreflang="en" href="https://arrproof.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://arrproof.com/en/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ARRproof · Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.">
-<meta property="og:description" content="ARR-Prüfung für Softwarehäuser mit HubSpot, jede Zahl bis zu Vertrag, Rechnung und Zahlung. Eine Leistung der CogniCore IT Solutions GmbH.">
+<meta property="og:title" content="ARRproof · Before the buyer checks your ARR, I check it.">
+<meta property="og:description" content="ARR review for software companies using HubSpot, every number traced to contract, invoice and payment. A service of CogniCore IT Solutions GmbH.">
 <meta property="og:image" content="https://arrproof.com/img/app-herkunft.webp">
-<meta property="og:locale" content="de_DE">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="theme-color" content="#F4F4F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,7 +139,7 @@ section.band.white{background:var(--surface)}
 /* Ablauf */
 .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:s}
 .flow li{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 18px 20px;counter-increment:s}
-.flow li::before{content:"Schritt " counter(s);display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.flow li::before{content:"Step " counter(s);display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
 .flow li p{font-size:16px}
 .price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);max-width:46em}
 
@@ -188,15 +189,15 @@ footer nav{display:flex;gap:20px}
 </head>
 <body>
 
-<div class="langbar"><div class="wrap"><nav class="lang" aria-label="Sprache wählen"><a href="./" hreflang="de" lang="de" data-lang="de" title="Deutsch" aria-current="page">DE</a><a href="en/" hreflang="en" lang="en" data-lang="en" title="English">EN</a></nav></div></div>
+<div class="langbar"><div class="wrap"><nav class="lang" aria-label="Choose language"><a href="../" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="./" hreflang="en" lang="en" data-lang="en" title="English" aria-current="page">EN</a></nav></div></div>
 <header class="top">
   <div class="wrap">
-    <a class="wm" href="#top" aria-label="ARRproof, zur Startseite"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
-    <nav aria-label="Seitenbereiche">
-      <a href="#ablauf">Ablauf</a>
-      <a href="#werkzeug">Werkzeug</a>
-      <a href="#ueber-mich">Über mich</a>
-      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
+    <a class="wm" href="#top" aria-label="ARRproof, home"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
+    <nav aria-label="Sections">
+      <a href="#process">Process</a>
+      <a href="#tool">Tool</a>
+      <a href="#about">About me</a>
+      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
     </nav>
   </div>
 </header>
@@ -205,25 +206,25 @@ footer nav{display:flex;gap:20px}
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="label">Für Softwarehäuser mit HubSpot und Abo-Geschäft</div>
-      <h1>Bevor der Käufer Ihren ARR prüft, prüfe ich ihn.</h1>
-      <p class="lead">Vor einem Verkauf, einer Nachfolge, dem Einstieg eines Investors oder einer Finanzierungsrunde gleiche ich Ihren wiederkehrenden Umsatz mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab. Jede Zahl führt bis zum Beleg. Was nicht zusammenpasst, wissen Sie dann vor der Gegenseite.</p>
+      <div class="label">For software companies with HubSpot and a subscription business</div>
+      <h1>Before the buyer checks your ARR, I check it.</h1>
+      <p class="lead">Before a sale, a succession, an investor coming on board or a funding round, I reconcile your recurring revenue with contracts, invoices, incoming payments and your books. Every number leads back to its source document. Whatever doesn't add up, you know about it before the other side does.</p>
       <div class="cta">
-        <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
-        <span class="alt">oder schreiben Sie mir an <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
+        <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
+        <span class="alt">or email me at <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
       </div>
     </div>
 
-    <aside class="insp" aria-label="Beispiel: Herkunft einer Bewegung im ARR">
-      <div class="ih"><span class="cap">Herkunft</span><span class="mono">Testdatensatz</span></div>
+    <aside class="insp" aria-label="Example: source trail of one ARR movement">
+      <div class="ih"><span class="cap">Source trail</span><span class="mono">Test dataset</span></div>
       <div class="nm">Hagedorn Logistik GmbH</div>
-      <div class="meta">ARR 36.419 € auf 47.976 € in zwölf Monaten</div>
-      <div class="mv"><div class="l">Ausbau Menge im Januar 2026</div><div class="big">+11.556 € ARR</div></div>
+      <div class="meta">ARR from €36,419 to €47,976 in twelve months</div>
+      <div class="mv"><div class="l">Expansion by volume in January 2026</div><div class="big">+€11,556 ARR</div></div>
       <ol class="trail">
-        <li><span class="cap">Vertrag</span><div class="tv">V-2026-0002</div><div class="td">Subscription, jährlich, Laufzeit bis 28.02.2027</div></li>
-        <li><span class="cap">Position</span><div class="tv">Velmont Cloud Named User, Menge 54</div><div class="td">ab 01.01.2026, Rabatt 26 %, MRR 963,04 €</div></li>
-        <li><span class="cap">Rechnung</span><div class="tv">RE-2025-000473 vom 20.12.2025</div><div class="td">Leistung 2026, netto 11.556,48 €</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>entspricht 12 × 963,04 € MRR</div></li>
-        <li><span class="cap">Zahlung</span><div class="tv">22.12.2025, 13.752,21 € brutto</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bankumsatz zugeordnet, voll bezahlt</div></li>
+        <li><span class="cap">Contract</span><div class="tv">V-2026-0002</div><div class="td">Subscription, billed annually, term until 28 Feb 2027</div></li>
+        <li><span class="cap">Line item</span><div class="tv">Velmont Cloud Named User, quantity 54</div><div class="td">from 1 Jan 2026, 26% discount, MRR €963.04</div></li>
+        <li><span class="cap">Invoice</span><div class="tv">RE-2025-000473 of 20 Dec 2025</div><div class="td">Service period 2026, net €11,556.48</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>matches 12 × €963.04 MRR</div></li>
+        <li><span class="cap">Payment</span><div class="tv">22 Dec 2025, €13,752.21 gross</div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bank transaction matched, paid in full</div></li>
       </ol>
     </aside>
   </div>
@@ -231,61 +232,61 @@ footer nav{display:flex;gap:20px}
 
 <section class="facts">
   <div class="wrap">
-    <p class="note">Ergebnis am Testdatensatz der Velmont Software GmbH, einer erfundenen Firma mit 590 aktiven Kunden, Stichtag 30.09.2026:</p>
+    <p class="note">Results on the test dataset of Velmont Software GmbH, a fictitious company with 590 active customers, cut-off date 30 Sep 2026:</p>
     <div class="kpis">
-      <div class="kpi"><div class="k">ARR</div><div class="v">11,49 Mio. €</div><div class="d">+799 T€ in zwölf Monaten</div></div>
-      <div class="kpi"><div class="k">Net Revenue Retention</div><div class="v">101,1 %</div><div class="d">Gross Revenue Retention 96,0 %</div></div>
-      <div class="kpi"><div class="k">Abstimmung der Brücke</div><div class="v acc"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>0,00 €</div><div class="d">auf beiden Rechenwegen</div></div>
-      <div class="kpi"><div class="k">Befunde mit hoher Wirkung</div><div class="v">42</div><div class="d">aus 23 Prüfregeln, jeder mit Datensatz</div></div>
+      <div class="kpi"><div class="k">ARR</div><div class="v">€11.49m</div><div class="d">+€799k in twelve months</div></div>
+      <div class="kpi"><div class="k">Net Revenue Retention</div><div class="v">101.1%</div><div class="d">Gross Revenue Retention 96.0%</div></div>
+      <div class="kpi"><div class="k">Bridge reconciliation</div><div class="v acc"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>€0.00</div><div class="d">difference on both calculation methods</div></div>
+      <div class="kpi"><div class="k">High-impact findings</div><div class="v">42</div><div class="d">from 23 checks, each with its record</div></div>
     </div>
   </div>
 </section>
 
-<section class="band white" id="ablauf">
+<section class="band white" id="process">
   <div class="wrap">
     <div class="sh">
-      <h2>Wo ARRproof in einer Transaktion liegt</h2>
-      <p>Bevor die Gegenseite Fragen stellt, sind Ihre Zahlen belegt und die Lücken bekannt. Wer früh anfängt, hat Zeit, sie zu schließen.</p>
+      <h2>Where ARRproof fits into a transaction</h2>
+      <p>Before the other side starts asking questions, your numbers are backed by documents and the gaps are known. If you start early, you have time to close them.</p>
     </div>
     <ol class="steps">
-      <li><b>Heute</b><span>Der Termin steht oder zeichnet sich ab.</span></li>
-      <li class="here"><b>ARRproof</b><span>Ich werte HubSpot, Rechnungen, Bank und Buchhaltung aus und lege die Befundliste vor.</span></li>
-      <li><b>Bereinigung</b><span>Was sich vorher korrigieren lässt, wird korrigiert, auf Wunsch von uns direkt in HubSpot.</span></li>
-      <li><b>Datenraum</b><span>Zahlen und Exporte liegen bereit, jede bis zum Beleg nachvollziehbar.</span></li>
-      <li><b>Due Diligence</b><span>Der Prüfer der Gegenseite arbeitet mit denselben Daten.</span></li>
-      <li><b>Signing</b><span>Offene Datenfragen sind bis dahin geklärt.</span></li>
+      <li><b>Today</b><span>The date is set or on the horizon.</span></li>
+      <li class="here"><b>ARRproof</b><span>I analyse HubSpot, invoices, bank and books and present the list of findings.</span></li>
+      <li><b>Clean-up</b><span>Whatever can be fixed beforehand gets fixed, directly in HubSpot by us if you like.</span></li>
+      <li><b>Data room</b><span>Numbers and exports are ready, each one traceable to its source document.</span></li>
+      <li><b>Due diligence</b><span>The other side's reviewers work with the same data.</span></li>
+      <li><b>Signing</b><span>Open data questions are settled by then.</span></li>
     </ol>
   </div>
 </section>
 
-<section class="band" id="werkzeug">
+<section class="band" id="tool">
   <div class="wrap">
     <div class="sh">
-      <h2>Jede Zahl mit Herkunft</h2>
-      <p>Mein Werkzeug führt CRM, Rechnungen, Bank und Buchhaltung zusammen. Wer auf eine Bewegung im ARR klickt, sieht den Weg über Vertrag und Position bis zu Rechnung und Zahlung und ob die Beträge zueinander passen.</p>
+      <h2>Every number with its source</h2>
+      <p>My tool brings CRM, invoices, bank and books together. Click on a movement in the ARR and you see the path through contract and line item to invoice and payment, and whether the amounts match.</p>
     </div>
     <figure class="shot" style="margin:0">
-      <img src="img/app-herkunft.webp" width="1600" height="1000" alt="ARRproof: ARR-Brücke über zwölf Monate mit Kennzahlen, rechts der Herkunftspfad einer Bewegung von Vertrag über Position und Rechnung bis zur Zahlung, Testdatensatz">
+      <img src="../img/app-herkunft.webp" width="1600" height="1000" alt="ARRproof: ARR bridge over twelve months with key figures, on the right the source trail of one movement from contract through line item and invoice to payment, test dataset, German interface">
     </figure>
-    <p class="figcap">Die ARR-Brücke des Testdatensatzes. Rechts der Weg einer Bewegung bis zur Zahlung.</p>
+    <p class="figcap">The ARR bridge of the test dataset, with the tool's German interface. On the right, the path of one movement through to payment.</p>
   </div>
 </section>
 
 <section class="band white">
   <div class="wrap">
     <div class="sh">
-      <h2>Was Sie danach in der Hand haben</h2>
-      <p>Alles als Ansicht zum Durchgehen im Termin und als Datei für Datenraum und Arbeitspapiere.</p>
+      <h2>What you have in hand afterwards</h2>
+      <p>Everything as a view to walk through together and as files for the data room and working papers.</p>
     </div>
     <dl class="deliv">
-      <div><dt>ARR-Brücke</dt><dd>ARR zum Stichtag und alle Bewegungen der letzten zwölf Monate, je Kunde</dd></div>
-      <div><dt>Kohorten</dt><dd>NRR, GRR und Kundenbindung je Startjahr</dd></div>
-      <div><dt>Abgleich</dt><dd>Vertrag, Rechnung und Buchhaltung für jeden Monat</dd></div>
-      <div><dt>Befundliste</dt><dd>jeder betroffene Datensatz mit HubSpot-ID und Betrag</dd></div>
-      <div><dt>Neugeschäft und Plan</dt><dd>Abschlussquote, Verlustgründe und der Abgleich Ihres Businessplans mit den Zahlen der Vergangenheit</dd></div>
-      <div><dt>Exporte</dt><dd>Dateien für Datenraum und Arbeitspapiere</dd></div>
-      <div><dt>Bereinigung</dt><dd>was vor der Prüfung in HubSpot korrigiert werden sollte, auf Wunsch von uns umgesetzt</dd></div>
-      <div><dt>Herkunft</dt><dd>für jeden Kunden der Weg von der Zahl bis zum Beleg</dd></div>
+      <div><dt>ARR bridge</dt><dd>ARR at the cut-off date and every movement of the last twelve months, per customer</dd></div>
+      <div><dt>Cohorts</dt><dd>NRR, GRR and customer retention by starting year</dd></div>
+      <div><dt>Reconciliation</dt><dd>Contract, invoice and books for every month</dd></div>
+      <div><dt>List of findings</dt><dd>Every affected record with its HubSpot ID and amount</dd></div>
+      <div><dt>New business and plan</dt><dd>Win rate, loss reasons and a check of your business plan against past figures</dd></div>
+      <div><dt>Exports</dt><dd>Files for the data room and working papers</dd></div>
+      <div><dt>Clean-up</dt><dd>What should be corrected in HubSpot before the review, done by us if you like</dd></div>
+      <div><dt>Source trail</dt><dd>For every customer, the path from the number to the source document</dd></div>
     </dl>
   </div>
 </section>
@@ -293,14 +294,14 @@ footer nav{display:flex;gap:20px}
 <section class="band">
   <div class="wrap">
     <div class="sh">
-      <h2>Was die Gegenseite sonst zuerst findet</h2>
-      <p>Vier Befunde aus dem Testdatensatz. In einer Due Diligence wird über jeden davon gesprochen, wenn ihn die Gegenseite zuerst findet.</p>
+      <h2>What the other side would otherwise find first</h2>
+      <p>Four findings from the test dataset. In a due diligence, each of them becomes a discussion if the other side finds it first.</p>
     </div>
     <div class="finds">
-      <div class="find"><span class="rtag">R03 Fakturierungslücke</span><div class="amt">147 T€</div><p>ARR aus neun aktiven Verträgen, zu denen es keine aktuelle Rechnung gibt</p></div>
-      <div class="find"><span class="rtag">R02 doppelte Positionen</span><div class="amt">36 T€</div><p>ARR zu viel, weil vier Vertragspositionen doppelt im CRM stehen</p></div>
-      <div class="find"><span class="rtag">R06 Debitor ohne CRM-Firma</span><div class="amt">169 T€</div><p>aus 23 Rechnungen an Debitoren, die es im CRM nicht gibt</p></div>
-      <div class="find"><span class="rtag">R11 Betrag als TCV</span><div class="amt">114 Deals</div><p>mit dem Gesamtvertragswert im Feld Betrag, wo die übrigen den Jahreswert haben</p></div>
+      <div class="find"><span class="rtag">R03 Billing gap</span><div class="amt">€147k</div><p>ARR from nine active contracts with no current invoice</p></div>
+      <div class="find"><span class="rtag">R02 Duplicate line items</span><div class="amt">€36k</div><p>ARR overstated because four contract line items appear twice in the CRM</p></div>
+      <div class="find"><span class="rtag">R06 Debtor without CRM company</span><div class="amt">€169k</div><p>from 23 invoices to debtors that don't exist in the CRM</p></div>
+      <div class="find"><span class="rtag">R11 Amount as TCV</span><div class="amt">114 deals</div><p>with the total contract value in the Amount field, where the others hold the annual value</p></div>
     </div>
   </div>
 </section>
@@ -308,49 +309,49 @@ footer nav{display:flex;gap:20px}
 <section class="band white">
   <div class="wrap">
     <div class="sh">
-      <h2>So läuft es ab</h2>
-      <p>Sie brauchen dafür keine neue Software. Ich arbeite mit Lesezugriff auf HubSpot und Exporten aus Ihren Systemen.</p>
+      <h2>How it works</h2>
+      <p>You don't need any new software for this. I work with read access to HubSpot and exports from your systems.</p>
     </div>
     <ol class="flow">
-      <li><p>Erstgespräch über Anlass, Termin und Ihre Systeme.</p></li>
-      <li><p>Vertraulichkeitsvereinbarung, lesender Zugang zu HubSpot, Exporte aus ERP und Buchhaltung.</p></li>
-      <li><p>Ich werte aus und lege Ihnen die Befundliste vor.</p></li>
-      <li><p>Wir gehen die Ergebnisse gemeinsam durch, danach bekommen Sie alle Unterlagen für den Datenraum.</p></li>
+      <li><p>Intro call about the occasion, the date and your systems.</p></li>
+      <li><p>Non-disclosure agreement, read access to HubSpot, exports from ERP and accounting.</p></li>
+      <li><p>I run the analysis and present the list of findings to you.</p></li>
+      <li><p>We go through the results together, and then you get all documents for the data room.</p></li>
     </ol>
-    <p class="price">Den Preis nenne ich Ihnen nach dem Erstgespräch. Er richtet sich danach, wie viele Verträge und Systeme zusammenkommen.</p>
+    <p class="price">I'll give you the price after the intro call. It depends on how many contracts and systems are involved.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
     <div class="sh" style="margin-bottom:0">
-      <h2>Für Prüfer und Investoren</h2>
-      <p>Ist schon ein Prüfer beauftragt, arbeite ich ihm zu. Jede Zahl lässt sich bis zum Beleg nachvollziehen und als Datei übernehmen. Das Urteil bleibt beim Prüfer, CogniCore ist keine Wirtschaftsprüfungsgesellschaft.</p>
+      <h2>For due diligence advisors and investors</h2>
+      <p>If an advisor is already engaged, I support their work. Every number can be traced back to its source document and taken over as a file. The judgement stays with the advisor. CogniCore is not an audit firm.</p>
     </div>
   </div>
 </section>
 
-<section class="band white" id="ueber-mich">
+<section class="band white" id="about">
   <div class="wrap me">
-    <img src="img/dominik-siegers.webp" width="800" height="800" alt="Dominik Siegers" loading="lazy">
+    <img src="../img/dominik-siegers.webp" width="800" height="800" alt="Dominik Siegers" loading="lazy">
     <div>
-      <div class="label">Über mich</div>
+      <div class="label">About me</div>
       <h2>Dominik Siegers</h2>
-      <p>Ich bin Gründer und Geschäftsführer der CogniCore IT Solutions GmbH in Köln. Mit meinem Team helfe ich mittelständischen Unternehmen, ihre Abläufe klarer und planbarer zu machen, meist mit HubSpot als zentralem System. Außerdem bin ich autorisierter INQA-Coach für neue Geschäftsmodelle und den Arbeitsplatz der Zukunft.</p>
-      <p>Ich komme aus der IT und habe sechs Jahre ein IT-Systemhaus geführt. Als Berater habe ich Beteiligungen aus Sicht der Eigentümer weiterentwickelt, als Investment Manager die Strukturen aufgebaut, über die Investoren kapitalsuchende Startups qualifiziert haben.</p>
-      <p>ARRproof ist ein Teil dieser Arbeit. Hier kommen der Blick von Eigentümern und Investoren und meine Erfahrung mit HubSpot seit 2016 zusammen.</p>
-      <div class="tags"><span>HubSpot Solutions Partner</span><span>Autorisierter INQA-Coach</span><span>Microsoft Partner</span><span>Köln</span></div>
+      <p>I'm the founder and managing director of CogniCore IT Solutions GmbH in Cologne. With my team I help mid-sized companies make their processes clearer and easier to plan, mostly with HubSpot as the central system. I'm also an authorised coach in INQA, a German federal programme, for new business models and the workplace of the future.</p>
+      <p>I come from IT and ran an IT services company for six years. As a consultant I developed portfolio companies from the owners' point of view, and as an investment manager I built the structures investors used to assess startups looking for capital.</p>
+      <p>ARRproof is part of this work. It brings together the view of owners and investors and my experience with HubSpot since 2016.</p>
+      <div class="tags"><span>HubSpot Solutions Partner</span><span>Authorised INQA coach</span><span>Microsoft Partner</span><span>Cologne</span></div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="kontakt">
+<section class="contact" id="contact">
   <div class="wrap">
-    <h2>Nennen Sie mir Ihren Stichtag.</h2>
-    <p>Ich sage Ihnen, was bis dahin machbar ist.</p>
+    <h2>Tell me your cut-off date.</h2>
+    <p>I'll tell you what can be done by then.</p>
     <div class="cta">
-      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
-      <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag">dominik.siegers@cognicore.de</a>
+      <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
+      <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20cut-off%20date">dominik.siegers@cognicore.de</a>
     </div>
   </div>
 </section>
@@ -358,8 +359,8 @@ footer nav{display:flex;gap:20px}
 
 <footer>
   <div class="wrap">
-    <span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen und Bildschirmfotos stammen aus einem synthetischen Testdatensatz.</span>
-    <nav aria-label="Weitere Seiten"><a href="fakten/">Fakten zu ARRproof</a><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></nav>
+    <span>ARRproof is a service of CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Cologne, Germany. All example figures and screenshots come from a synthetic test dataset.</span>
+    <nav aria-label="More pages"><a href="facts/">Facts about ARRproof</a><a href="https://www.cognicore.de/impressum" hreflang="de">Legal notice (German)</a><a href="https://cognicore.de/datenschutzerklaerung" hreflang="de">Privacy policy (German)</a></nav>
   </div>
 </footer>
 
