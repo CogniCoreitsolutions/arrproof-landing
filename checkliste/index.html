@@ -19,9 +19,9 @@
 <meta property="og:title" content="Was ein Käufer an Ihrem ARR prüft">
 <meta property="og:description" content="27 Fragen zum wiederkehrenden Umsatz eines Softwarehauses vor einer Due Diligence: Verträge, Rechnungen, Zahlungen, Buchhaltung, CRM-Daten und Kennzahlen.">
 <meta property="og:locale" content="de_DE">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="../brand/arrproof/svg/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../brand/arrproof/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../brand/arrproof/apple-touch-icon.png" sizes="180x180">
 <meta name="theme-color" content="#F4F4F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +47,9 @@ p{margin:0}
 .top .wrap{max-width:1180px;display:flex;align-items:center;gap:12px 24px;min-height:62px;flex-wrap:wrap}
 .wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-disp);font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
 .wm .mark{height:30px;width:auto;flex:0 0 auto}
+.wm .brand-logo{display:block;height:36px;width:auto;flex:0 0 auto}
+@media (max-width:480px){.wm .brand-logo{height:28px}}
+@media (max-width:360px){.wm .brand-logo{height:24px}}
 .top nav{display:flex;gap:4px 22px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:15px}
 .top nav a{text-decoration:none;color:var(--text);padding:8px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;background:var(--ink);color:#fff !important;border:1px solid transparent;cursor:pointer;font-family:var(--f-text)}
@@ -92,6 +95,10 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
   .grp{border:1px solid #bbb;break-inside:avoid}
   ul.chk input:checked+span{color:inherit}
 }
+/* Kopfzeile auf schmalen Breiten: Logo, Navigation und Button in einer Zeile */
+@media (max-width:900px){.top nav{gap:4px 16px;font-size:14px}.top nav a.btn,.top .btn{padding:0 14px;font-size:14px}}
+@media (max-width:560px){.top .wrap{gap:8px 12px}}
+@media (max-width:360px){.top nav a.btn,.top .btn{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -99,7 +106,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
 <div class="langbar"><div class="wrap"><nav class="lang" aria-label="Sprache wählen"><a href="./" hreflang="de" lang="de" data-lang="de" title="Deutsch" aria-current="page">DE</a><a href="../en/checklist/" hreflang="en" lang="en" data-lang="en" title="English">EN</a></nav></div></div>
 <header class="top">
   <div class="wrap">
-    <a class="wm" href="../" aria-label="ARRproof, zur Startseite"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
+    <a class="wm" href="../" aria-label="ARRproof, zur Startseite"><img class="brand-logo" src="../brand/arrproof/svg/arrproof-logo.svg" alt="ARRproof" width="952" height="208"></a>
     <nav aria-label="Seitenbereiche">
       <a href="../">Startseite</a>
       <a class="btn" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
