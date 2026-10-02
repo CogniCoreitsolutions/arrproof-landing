@@ -141,7 +141,7 @@ section.band.white{background:var(--surface)}
 .flow li{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 18px 20px;counter-increment:s}
 .flow li::before{content:"Step " counter(s);display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
 .flow li p{font-size:16px}
-.price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);max-width:46em}
+.price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
 
 /* Über mich */
 .me{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
@@ -164,9 +164,26 @@ footer{padding:24px 0 40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
 footer nav{display:flex;gap:20px}
 
+/* Person im Kopfbereich */
+.byline{display:flex;align-items:center;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border);max-width:36em}
+.byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--border);flex:0 0 auto}
+.byline p{font-size:15px;color:var(--muted);line-height:1.45}
+.byline a{color:var(--ink);font-weight:600;text-decoration:none}
+/* Hebel auf den Kaufpreis */
+.lever{margin-top:18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--warn);border-radius:10px;padding:16px 20px;max-width:62em;color:var(--ink)}
+.band .note{font-size:14px;color:var(--muted);margin-bottom:12px}
+/* Vertraulichkeit */
+.conf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.conf div{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px}
+section.band.white .conf div{background:var(--bg)}
+.conf b{display:block;font-family:var(--f-disp);font-size:17px;color:var(--ink);margin-bottom:6px}
+.conf p{font-size:15px}
+/* Hinweis für Prüfer und Investoren */
+.aside-note{margin-top:28px;padding:18px 20px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-size:15.5px;max-width:62em}
+.aside-note b{color:var(--ink)}
 @media (max-width:1020px){
   .hero .wrap,.sh,.me{grid-template-columns:minmax(0,1fr)}
-  .kpis,.finds,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis,.finds,.flow,.conf{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
   .deliv{grid-template-columns:minmax(0,1fr)}
   .me img{max-width:280px}
@@ -174,7 +191,9 @@ footer nav{display:flex;gap:20px}
 @media (max-width:560px){
   body{font-size:16px}
   .top nav a:not(.btn){display:none}
-  .kpis,.finds,.flow,.steps{grid-template-columns:minmax(0,1fr)}
+  .top .wrap{gap:8px 12px}
+  .top .btn{padding:0 12px;font-size:14px}
+  .kpis,.finds,.flow,.steps,.conf{grid-template-columns:minmax(0,1fr)}
   .deliv div{grid-template-columns:minmax(0,1fr)}
   .kpi .v{font-size:26px}
 }
@@ -196,6 +215,7 @@ footer nav{display:flex;gap:20px}
     <nav aria-label="Sections">
       <a href="#process">Process</a>
       <a href="#tool">Tool</a>
+      <a href="#confidentiality">Confidentiality</a>
       <a href="#about">About me</a>
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
     </nav>
@@ -211,8 +231,10 @@ footer nav{display:flex;gap:20px}
       <p class="lead">Before a sale, a succession, an investor coming on board or a funding round, I reconcile your recurring revenue with contracts, invoices, incoming payments and your books. Every number leads back to its source document. Whatever doesn't add up, you know about it before the other side does.</p>
       <div class="cta">
         <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
+        <a class="btn sec" href="checklist/">Checklist: what buyers check</a>
         <span class="alt">or email me at <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
       </div>
+      <div class="byline"><img src="../img/dominik-siegers.webp" width="88" height="88" alt=""><p><a href="#about">Dominik Siegers</a>. I ran an IT services company myself and worked on the investor side as an investment manager.</p></div>
     </div>
 
     <aside class="insp" aria-label="Example: source trail of one ARR movement">
@@ -250,7 +272,7 @@ footer nav{display:flex;gap:20px}
     </div>
     <ol class="steps">
       <li><b>Today</b><span>The date is set or on the horizon.</span></li>
-      <li class="here"><b>ARRproof</b><span>I analyse HubSpot, invoices, bank and books and present the list of findings.</span></li>
+      <li class="here"><b>ARRproof</b><span>I analyse HubSpot, invoices, bank and books and present the list of findings within two to three weeks.</span></li>
       <li><b>Clean-up</b><span>Whatever can be fixed beforehand gets fixed, directly in HubSpot by us if you like.</span></li>
       <li><b>Data room</b><span>Numbers and exports are ready, each one traceable to its source document.</span></li>
       <li><b>Due diligence</b><span>The other side's reviewers work with the same data.</span></li>
@@ -284,7 +306,7 @@ footer nav{display:flex;gap:20px}
       <div><dt>Reconciliation</dt><dd>Contract, invoice and books for every month</dd></div>
       <div><dt>List of findings</dt><dd>Every affected record with its HubSpot ID and amount</dd></div>
       <div><dt>New business and plan</dt><dd>Win rate, loss reasons and a check of your business plan against past figures</dd></div>
-      <div><dt>Exports</dt><dd>Files for the data room and working papers</dd></div>
+      <div><dt>Legacy contracts</dt><dd>Maintenance and hosting in the ARR, switches to subscription and the uplift that came with them</dd></div>
       <div><dt>Clean-up</dt><dd>What should be corrected in HubSpot before the review, done by us if you like</dd></div>
       <div><dt>Source trail</dt><dd>For every customer, the path from the number to the source document</dd></div>
     </dl>
@@ -303,10 +325,27 @@ footer nav{display:flex;gap:20px}
       <div class="find"><span class="rtag">R06 Debtor without CRM company</span><div class="amt">€169k</div><p>from 23 invoices to debtors that don't exist in the CRM</p></div>
       <div class="find"><span class="rtag">R11 Amount as TCV</span><div class="amt">114 deals</div><p>with the total contract value in the Amount field, where the others hold the annual value</p></div>
     </div>
+    <p class="lever">If the other side values your company at a multiple of ARR, every euro it does not accept comes off the purchase price at that multiple.</p>
   </div>
 </section>
 
-<section class="band white">
+<section class="band white" id="maintenance">
+  <div class="wrap">
+    <div class="sh">
+      <h2>How much ARR still depends on maintenance contracts</h2>
+      <p>In established software companies, some customers often still have a perpetual licence with a maintenance contract alongside the subscriptions. Whether a buyer accepts that maintenance as recurring revenue is a valuation question. I calculate everything with and without maintenance and show how the customer base has moved to subscription so far.</p>
+    </div>
+    <p class="note">In the test dataset, cut-off date 30 Sep 2026:</p>
+    <div class="kpis">
+      <div class="kpi"><div class="k">Customers with maintenance or hosting only</div><div class="v">120</div><div class="d">20% of active customers</div></div>
+      <div class="kpi"><div class="k">ARR of these customers</div><div class="v">€1.72m</div><div class="d">14.9% of ARR</div></div>
+      <div class="kpi"><div class="k">Switches to subscription</div><div class="v">213</div><div class="d">since 2016, 15 of them in the last twelve months</div></div>
+      <div class="kpi"><div class="k">Uplift on switching</div><div class="v">1.60×</div><div class="d">subscription MRR after twelve months vs. maintenance before, median</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
   <div class="wrap">
     <div class="sh">
       <h2>How it works</h2>
@@ -315,23 +354,30 @@ footer nav{display:flex;gap:20px}
     <ol class="flow">
       <li><p>Intro call about the occasion, the date and your systems.</p></li>
       <li><p>Non-disclosure agreement, read access to HubSpot, exports from ERP and accounting.</p></li>
-      <li><p>I run the analysis and present the list of findings to you.</p></li>
+      <li><p>I run the analysis and present the list of findings to you within two to three weeks.</p></li>
       <li><p>We go through the results together, and then you get all documents for the data room.</p></li>
     </ol>
     <p class="price">I'll give you the price after the intro call. It depends on how many contracts and systems are involved.</p>
+    <p class="aside-note"><b>For due diligence advisors and investors:</b> If an advisor is already engaged, I support their work. Every number can be traced back to its source document and taken over as a file. The judgement stays with the advisor. CogniCore is not an audit firm.</p>
   </div>
 </section>
 
-<section class="band">
+<section class="band white" id="confidentiality">
   <div class="wrap">
-    <div class="sh" style="margin-bottom:0">
-      <h2>For due diligence advisors and investors</h2>
-      <p>If an advisor is already engaged, I support their work. Every number can be traced back to its source document and taken over as a file. The judgement stays with the advisor. CogniCore is not an audit firm.</p>
+    <div class="sh">
+      <h2>Confidential from the start</h2>
+      <p>Before a sale, usually only a few people know about it. On your side, all it takes is read access to HubSpot and the exports from ERP and accounting. You decide who finds out.</p>
+    </div>
+    <div class="conf">
+      <div><b>Agreement first</b><p>Before I see a single record, we sign a non-disclosure agreement.</p></div>
+      <div><b>Read only</b><p>I read HubSpot and change nothing there. Corrections happen only on your explicit instruction.</p></div>
+      <div><b>Analysed locally</b><p>The analysis runs on my own computer. What I receive from HubSpot and your exports goes to no cloud or AI service.</p></div>
+      <div><b>Deleted after 30 days</b><p>30 days after handover I delete all data I received from you.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band white" id="about">
+<section class="band" id="about">
   <div class="wrap me">
     <img src="../img/dominik-siegers.webp" width="800" height="800" alt="Dominik Siegers" loading="lazy">
     <div>
@@ -348,7 +394,7 @@ footer nav{display:flex;gap:20px}
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Tell me your cut-off date.</h2>
-    <p>I'll tell you what can be done by then.</p>
+    <p>From data access to the list of findings, I plan two to three weeks. I'll tell you what can be done by your cut-off date.</p>
     <div class="cta">
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
       <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20cut-off%20date">dominik.siegers@cognicore.de</a>
@@ -360,7 +406,7 @@ footer nav{display:flex;gap:20px}
 <footer>
   <div class="wrap">
     <span>ARRproof is a service of CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Cologne, Germany. All example figures and screenshots come from a synthetic test dataset.</span>
-    <nav aria-label="More pages"><a href="facts/">Facts about ARRproof</a><a href="https://www.cognicore.de/impressum" hreflang="de">Legal notice (German)</a><a href="https://cognicore.de/datenschutzerklaerung" hreflang="de">Privacy policy (German)</a></nav>
+    <nav aria-label="More pages"><a href="checklist/">Checklist</a><a href="facts/">Facts about ARRproof</a><a href="https://www.cognicore.de/impressum" hreflang="de">Legal notice (German)</a><a href="https://cognicore.de/datenschutzerklaerung" hreflang="de">Privacy policy (German)</a></nav>
   </div>
 </footer>
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Sprache: gespeicherte Wahl gilt, sonst beim Einstieg die primäre Browsersprache (de* = Deutsch, sonst Englisch). Interne Klicks leiten nicht um. */
+(function(){var P='en',A='../../checkliste/',k='arrproof-lang',p=null,i=false;try{p=localStorage.getItem(k)}catch(e){}try{i=!!document.referrer&&new URL(document.referrer).host===location.host}catch(e){}if(!p&&i)return;var n=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();var w=p||(n.slice(0,2)==='de'?'de':'en');if(w!==P)location.replace(A)})();
+</script>
+<title>Checklist: what a buyer checks in your ARR · ARRproof</title>
+<meta name="description" content="27 questions about a software company’s recurring revenue ahead of a due diligence: contracts, invoices, payments, accounting, CRM data and key figures.">
+<!-- Like the home page: not indexed until name, trademark and offer are settled -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://arrproof.com/en/checklist/">
+<link rel="alternate" hreflang="de" href="https://arrproof.com/checkliste/">
+<link rel="alternate" hreflang="en" href="https://arrproof.com/en/checklist/">
+<link rel="alternate" hreflang="x-default" href="https://arrproof.com/en/checklist/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What a buyer checks in your ARR">
+<meta property="og:description" content="27 questions about a software company’s recurring revenue ahead of a due diligence: contracts, invoices, payments, accounting, CRM data and key figures.">
+<meta property="og:locale" content="en_GB">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500..800&amp;family=Red+Hat+Mono:wght@400..600&amp;family=Red+Hat+Text:ital,wght@0,400..700;1,400&amp;display=swap">
+<style>
+:root{
+  --ink:#17191C;--text:#33363C;--muted:#5E626A;--faint:#8A8E95;
+  --bg:#F4F4F1;--surface:#FFFFFF;--border:#E1E1DC;--border-2:#ECECE8;
+  --accent:#0F7B5F;--accent-bg:#E6F2EC;--accent-line:#D3E6DC;
+  --f-text:'Red Hat Text',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-disp:'Red Hat Display','Red Hat Text',system-ui,sans-serif;
+  --f-mono:'Red Hat Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-underline-offset:4px;text-decoration-color:var(--accent-line);text-decoration-thickness:2px}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-disp);color:var(--ink);margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+.top .wrap{max-width:1180px;display:flex;align-items:center;gap:12px 24px;min-height:62px;flex-wrap:wrap}
+.wm{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-disp);font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.wm .mark{height:30px;width:auto;flex:0 0 auto}
+.top nav{display:flex;gap:4px 22px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:15px}
+.top nav a{text-decoration:none;color:var(--text);padding:8px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;background:var(--ink);color:#fff !important;border:1px solid transparent;cursor:pointer;font-family:var(--f-text)}
+.btn:hover{background:#000}
+.btn.sec{background:#fff;color:var(--ink) !important;border-color:var(--border)}
+.btn.sec:hover{border-color:#C9CBC4;background:#fff}
+.top nav a.btn{padding:0 16px;min-height:40px}
+main{padding:clamp(40px,6vw,72px) 0 clamp(56px,7vw,96px)}
+.label{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:12px}
+h1{font-weight:700;font-size:clamp(34px,4.6vw,52px);line-height:1.06;letter-spacing:-.02em}
+.intro p{margin-top:16px;font-size:18px}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:22px}
+.count{font-size:15px;color:var(--muted)}
+.count b{color:var(--ink)}
+.grp{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:6px 22px 8px;margin-top:22px}
+.grp h2{font-size:21px;font-weight:700;padding:16px 0 6px;display:flex;gap:10px;align-items:baseline}
+.grp h2 span{font-family:var(--f-mono);font-size:14px;font-weight:500;color:var(--accent)}
+ul.chk{list-style:none;margin:0;padding:0}
+ul.chk li{border-top:1px solid var(--border-2)}
+ul.chk label{display:flex;gap:14px;align-items:flex-start;padding:12px 0;cursor:pointer}
+ul.chk input{accent-color:var(--accent);width:19px;height:19px;margin:4px 0 0;flex:0 0 auto;cursor:pointer}
+ul.chk input:checked+span{color:var(--muted)}
+.end{margin-top:40px;background:var(--ink);color:#DADCDF;border-radius:14px;padding:clamp(24px,4vw,40px)}
+.end h2{color:#fff;font-size:clamp(24px,3vw,32px);font-weight:700;line-height:1.15}
+.end p{margin-top:12px;max-width:40em}
+.end .tools a.btn{background:#fff;color:var(--ink) !important}
+.end .tools a.mail{color:#fff;text-decoration-color:rgba(255,255,255,.35)}
+footer{padding:24px 0 40px;font-size:14px;color:var(--muted);border-top:1px solid var(--border)}
+footer .wrap{max-width:1180px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+/* Sprachumschalter */
+.langbar{background:var(--bg);border-bottom:1px solid var(--border-2)}
+.langbar .wrap{max-width:1180px;display:flex;justify-content:flex-end;align-items:center;min-height:34px}
+.lang{display:inline-flex;gap:2px;padding:2px;border:1px solid var(--border);border-radius:7px;background:var(--surface)}
+.lang a{font-size:12px;font-weight:700;letter-spacing:.06em;line-height:1;padding:5px 8px;border-radius:5px;text-decoration:none;color:var(--muted)}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current]{background:var(--ink);color:#fff}
+@media (max-width:640px){body{font-size:16px}.top nav a:not(.btn){display:none}}
+@media print{
+  .langbar,.top,footer,.noprint{display:none !important}
+  body{background:#fff;font-size:12pt}
+  main{padding:0}
+  .grp{border:1px solid #bbb;break-inside:avoid}
+  ul.chk input:checked+span{color:inherit}
+}
+</style>
+</head>
+<body>
+
+<div class="langbar"><div class="wrap"><nav class="lang" aria-label="Choose language"><a href="../../checkliste/" hreflang="de" lang="de" data-lang="de" title="Deutsch">DE</a><a href="./" hreflang="en" lang="en" data-lang="en" title="English" aria-current="page">EN</a></nav></div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="wm" href="../" aria-label="ARRproof, home"><svg class="mark" viewBox="0 0 267 260" aria-hidden="true" focusable="false"><path fill="#17191C" d="M249.58 79A130 130 0 1 0 249.58 181L192.93 181A81 81 0 1 1 192.93 79Z"/><circle cx="130" cy="130" r="55.5" fill="#0F7B5F"/><rect x="180" y="121.5" width="36" height="17" fill="#0F7B5F"/><circle cx="239" cy="130" r="27.5" fill="#0F7B5F"/></svg><span>ARRproof</span></a>
+    <nav aria-label="Sections">
+      <a href="../">Home</a>
+      <a class="btn" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      <div class="label">Checklist</div>
+      <h1>What a buyer checks in your ARR</h1>
+      <p>These questions are based on the 23 checks in my tool. Every question you cannot answer with a confident yes today becomes a topic in a due diligence if the other side asks it first.</p>
+      <div class="tools noprint">
+        <button class="btn sec" type="button" id="print">Print checklist</button>
+        <span class="count" aria-live="polite">Answered yes: <b id="n">0</b> of <b id="total">27</b></span>
+      </div>
+    </div>
+
+    <section class="grp" aria-labelledby="g1">
+      <h2 id="g1"><span>01</span>Contracts and line items</h2>
+      <ul class="chk">
+        <li><label><input type="checkbox"><span>Does every won deal have a contract with line items?</span></label></li>
+        <li><label><input type="checkbox"><span>Is every service under contract only once?</span></label></li>
+        <li><label><input type="checkbox"><span>Does every contract line item have a monthly value (MRR) and a billing frequency?</span></label></li>
+        <li><label><input type="checkbox"><span>Do all active contracts have a signature date?</span></label></li>
+        <li><label><input type="checkbox"><span>Are price and quantity changes recorded as a new version of the line item, with the date from which it applies?</span></label></li>
+      </ul>
+    </section>
+    <section class="grp" aria-labelledby="g2">
+      <h2 id="g2"><span>02</span>Invoices</h2>
+      <ul class="chk">
+        <li><label><input type="checkbox"><span>Does every active contract have a current invoice?</span></label></li>
+        <li><label><input type="checkbox"><span>Does billing stop when the contract ends?</span></label></li>
+        <li><label><input type="checkbox"><span>Can every recurring invoice be matched to a contract?</span></label></li>
+        <li><label><input type="checkbox"><span>Does every debtor also exist as a company in the CRM?</span></label></li>
+        <li><label><input type="checkbox"><span>Is every duplicate invoice cancelled?</span></label></li>
+        <li><label><input type="checkbox"><span>Does every invoice state a service period?</span></label></li>
+        <li><label><input type="checkbox"><span>Does the invoice currency match the contract currency?</span></label></li>
+      </ul>
+    </section>
+    <section class="grp" aria-labelledby="g3">
+      <h2 id="g3"><span>03</span>Payments and accounting</h2>
+      <ul class="chk">
+        <li><label><input type="checkbox"><span>Is every incoming payment matched to an invoice?</span></label></li>
+        <li><label><input type="checkbox"><span>Are receivables that have been open for more than 90 days resolved?</span></label></li>
+        <li><label><input type="checkbox"><span>Do the revenues in the books match the invoices month by month?</span></label></li>
+        <li><label><input type="checkbox"><span>Are manual postings on revenue accounts explained, such as accruals or goodwill credit notes?</span></label></li>
+      </ul>
+    </section>
+    <section class="grp" aria-labelledby="g4">
+      <h2 id="g4"><span>04</span>CRM data</h2>
+      <ul class="chk">
+        <li><label><input type="checkbox"><span>Is every company created only once?</span></label></li>
+        <li><label><input type="checkbox"><span>Does every active customer have a debtor number?</span></label></li>
+        <li><label><input type="checkbox"><span>Does the Amount field hold the same measure on all deals, either the annual value everywhere or the total value everywhere?</span></label></li>
+        <li><label><input type="checkbox"><span>Is the lifecycle stage “customer” used only where there is an active contract?</span></label></li>
+        <li><label><input type="checkbox"><span>Does the “customer since” field match the contracts?</span></label></li>
+        <li><label><input type="checkbox"><span>Are lost opportunities recorded with a reason?</span></label></li>
+        <li><label><input type="checkbox"><span>Are the HubSpot fields for recurring revenue maintained?</span></label></li>
+      </ul>
+    </section>
+    <section class="grp" aria-labelledby="g5">
+      <h2 id="g5"><span>05</span>Key figures</h2>
+      <ul class="chk">
+        <li><label><input type="checkbox"><span>Can the ARR at the cut-off date be derived from the contract line items, without a manual spreadsheet?</span></label></li>
+        <li><label><input type="checkbox"><span>Does the ARR bridge over twelve months reconcile per customer without a remainder?</span></label></li>
+        <li><label><input type="checkbox"><span>Are NRR, GRR and cohorts by starting year available?</span></label></li>
+        <li><label><input type="checkbox"><span>Do you know how much ARR still depends on maintenance contracts and how many of these customers have already moved to subscription?</span></label></li>
+      </ul>
+    </section>
+
+    <section class="end">
+      <h2>More than a few questions open?</h2>
+      <p>Then I’ll take a look at your data. From data access to the list of findings, I plan two to three weeks. The analysis runs locally on my own computer, and 30 days after handover I delete all data.</p>
+      <div class="tools">
+        <a class="btn" href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a>
+        <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20checklist">dominik.siegers@cognicore.de</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ARRproof is a service of CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Cologne, Germany.</span>
+    <nav aria-label="More pages"><a href="../">Home</a><a href="../facts/">Facts about ARRproof</a><a href="https://www.cognicore.de/impressum" hreflang="de">Legal notice (German)</a><a href="https://cognicore.de/datenschutzerklaerung" hreflang="de">Privacy policy (German)</a></nav>
+  </div>
+</footer>
+
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a){try{localStorage.setItem('arrproof-lang',a.getAttribute('data-lang'))}catch(x){}}});</script>
+<script>(function(){var b=document.querySelectorAll('ul.chk input'),c=document.getElementById('n');function u(){var k=0;b.forEach(function(x){if(x.checked)k++});c.textContent=k}b.forEach(function(x){x.addEventListener('change',u)});document.getElementById('total').textContent=b.length;u();var p=document.getElementById('print');if(p)p.addEventListener('click',function(){window.print()})})();</script>
+</body>
+</html>

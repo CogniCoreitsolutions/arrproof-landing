@@ -140,7 +140,7 @@ section.band.white{background:var(--surface)}
 .flow li{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 18px 20px;counter-increment:s}
 .flow li::before{content:"Schritt " counter(s);display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
 .flow li p{font-size:16px}
-.price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border);max-width:46em}
+.price{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
 
 /* Über mich */
 .me{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
@@ -163,9 +163,26 @@ footer{padding:24px 0 40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
 footer nav{display:flex;gap:20px}
 
+/* Person im Kopfbereich */
+.byline{display:flex;align-items:center;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border);max-width:36em}
+.byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--border);flex:0 0 auto}
+.byline p{font-size:15px;color:var(--muted);line-height:1.45}
+.byline a{color:var(--ink);font-weight:600;text-decoration:none}
+/* Hebel auf den Kaufpreis */
+.lever{margin-top:18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--warn);border-radius:10px;padding:16px 20px;max-width:62em;color:var(--ink)}
+.band .note{font-size:14px;color:var(--muted);margin-bottom:12px}
+/* Vertraulichkeit */
+.conf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.conf div{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px}
+section.band.white .conf div{background:var(--bg)}
+.conf b{display:block;font-family:var(--f-disp);font-size:17px;color:var(--ink);margin-bottom:6px}
+.conf p{font-size:15px}
+/* Hinweis für Prüfer und Investoren */
+.aside-note{margin-top:28px;padding:18px 20px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-size:15.5px;max-width:62em}
+.aside-note b{color:var(--ink)}
 @media (max-width:1020px){
   .hero .wrap,.sh,.me{grid-template-columns:minmax(0,1fr)}
-  .kpis,.finds,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis,.finds,.flow,.conf{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
   .deliv{grid-template-columns:minmax(0,1fr)}
   .me img{max-width:280px}
@@ -173,7 +190,9 @@ footer nav{display:flex;gap:20px}
 @media (max-width:560px){
   body{font-size:16px}
   .top nav a:not(.btn){display:none}
-  .kpis,.finds,.flow,.steps{grid-template-columns:minmax(0,1fr)}
+  .top .wrap{gap:8px 12px}
+  .top .btn{padding:0 12px;font-size:14px}
+  .kpis,.finds,.flow,.steps,.conf{grid-template-columns:minmax(0,1fr)}
   .deliv div{grid-template-columns:minmax(0,1fr)}
   .kpi .v{font-size:26px}
 }
@@ -195,6 +214,7 @@ footer nav{display:flex;gap:20px}
     <nav aria-label="Seitenbereiche">
       <a href="#ablauf">Ablauf</a>
       <a href="#werkzeug">Werkzeug</a>
+      <a href="#vertraulichkeit">Vertraulichkeit</a>
       <a href="#ueber-mich">Über mich</a>
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
     </nav>
@@ -210,8 +230,10 @@ footer nav{display:flex;gap:20px}
       <p class="lead">Vor einem Verkauf, einer Nachfolge, dem Einstieg eines Investors oder einer Finanzierungsrunde gleiche ich Ihren wiederkehrenden Umsatz mit Verträgen, Rechnungen, Zahlungseingängen und Buchhaltung ab. Jede Zahl führt bis zum Beleg. Was nicht zusammenpasst, wissen Sie dann vor der Gegenseite.</p>
       <div class="cta">
         <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
+        <a class="btn sec" href="checkliste/">Checkliste: Was Käufer prüfen</a>
         <span class="alt">oder schreiben Sie mir an <a href="mailto:dominik.siegers@cognicore.de?subject=ARRproof">dominik.siegers@cognicore.de</a></span>
       </div>
+      <div class="byline"><img src="img/dominik-siegers.webp" width="88" height="88" alt=""><p><a href="#ueber-mich">Dominik Siegers</a>. Ich habe selbst ein IT-Systemhaus geführt und als Investment Manager auf der Seite der Investoren gearbeitet.</p></div>
     </div>
 
     <aside class="insp" aria-label="Beispiel: Herkunft einer Bewegung im ARR">
@@ -249,7 +271,7 @@ footer nav{display:flex;gap:20px}
     </div>
     <ol class="steps">
       <li><b>Heute</b><span>Der Termin steht oder zeichnet sich ab.</span></li>
-      <li class="here"><b>ARRproof</b><span>Ich werte HubSpot, Rechnungen, Bank und Buchhaltung aus und lege die Befundliste vor.</span></li>
+      <li class="here"><b>ARRproof</b><span>Ich werte HubSpot, Rechnungen, Bank und Buchhaltung aus und lege nach zwei bis drei Wochen die Befundliste vor.</span></li>
       <li><b>Bereinigung</b><span>Was sich vorher korrigieren lässt, wird korrigiert, auf Wunsch von uns direkt in HubSpot.</span></li>
       <li><b>Datenraum</b><span>Zahlen und Exporte liegen bereit, jede bis zum Beleg nachvollziehbar.</span></li>
       <li><b>Due Diligence</b><span>Der Prüfer der Gegenseite arbeitet mit denselben Daten.</span></li>
@@ -283,7 +305,7 @@ footer nav{display:flex;gap:20px}
       <div><dt>Abgleich</dt><dd>Vertrag, Rechnung und Buchhaltung für jeden Monat</dd></div>
       <div><dt>Befundliste</dt><dd>jeder betroffene Datensatz mit HubSpot-ID und Betrag</dd></div>
       <div><dt>Neugeschäft und Plan</dt><dd>Abschlussquote, Verlustgründe und der Abgleich Ihres Businessplans mit den Zahlen der Vergangenheit</dd></div>
-      <div><dt>Exporte</dt><dd>Dateien für Datenraum und Arbeitspapiere</dd></div>
+      <div><dt>Altverträge</dt><dd>Pflege und Hosting im ARR, Wechsel ins Abo und der Aufschlag dabei</dd></div>
       <div><dt>Bereinigung</dt><dd>was vor der Prüfung in HubSpot korrigiert werden sollte, auf Wunsch von uns umgesetzt</dd></div>
       <div><dt>Herkunft</dt><dd>für jeden Kunden der Weg von der Zahl bis zum Beleg</dd></div>
     </dl>
@@ -302,10 +324,27 @@ footer nav{display:flex;gap:20px}
       <div class="find"><span class="rtag">R06 Debitor ohne CRM-Firma</span><div class="amt">169 T€</div><p>aus 23 Rechnungen an Debitoren, die es im CRM nicht gibt</p></div>
       <div class="find"><span class="rtag">R11 Betrag als TCV</span><div class="amt">114 Deals</div><p>mit dem Gesamtvertragswert im Feld Betrag, wo die übrigen den Jahreswert haben</p></div>
     </div>
+    <p class="lever">Bewertet die Gegenseite Ihr Unternehmen nach einem Vielfachen des ARR, geht jeder Euro, den sie nicht anerkennt, mit diesem Faktor vom Kaufpreis ab.</p>
   </div>
 </section>
 
-<section class="band white">
+<section class="band white" id="pflege">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Wie viel ARR an Pflegeverträgen hängt</h2>
+      <p>Bei gewachsenen Softwarehäusern haben oft noch Kunden eine Kauflizenz mit Pflegevertrag neben dem Abo. Ob ein Käufer diese Pflege als wiederkehrenden Umsatz anerkennt, ist eine Bewertungsfrage. Ich rechne alles mit und ohne Pflege und zeige, wie der Bestand bisher ins Abo gewechselt ist.</p>
+    </div>
+    <p class="note">Im Testdatensatz, Stichtag 30.09.2026:</p>
+    <div class="kpis">
+      <div class="kpi"><div class="k">Kunden nur mit Pflege oder Hosting</div><div class="v">120</div><div class="d">20 % der aktiven Kunden</div></div>
+      <div class="kpi"><div class="k">ARR dieser Kunden</div><div class="v">1,72 Mio. €</div><div class="d">14,9 % des ARR</div></div>
+      <div class="kpi"><div class="k">Wechsel ins Abo</div><div class="v">213</div><div class="d">seit 2016, davon 15 in den letzten zwölf Monaten</div></div>
+      <div class="kpi"><div class="k">Aufschlag beim Wechsel</div><div class="v">1,60×</div><div class="d">Abo-MRR nach zwölf Monaten zur Pflege vorher, Median</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
   <div class="wrap">
     <div class="sh">
       <h2>So läuft es ab</h2>
@@ -314,23 +353,30 @@ footer nav{display:flex;gap:20px}
     <ol class="flow">
       <li><p>Erstgespräch über Anlass, Termin und Ihre Systeme.</p></li>
       <li><p>Vertraulichkeitsvereinbarung, lesender Zugang zu HubSpot, Exporte aus ERP und Buchhaltung.</p></li>
-      <li><p>Ich werte aus und lege Ihnen die Befundliste vor.</p></li>
+      <li><p>Ich werte aus und lege Ihnen nach zwei bis drei Wochen die Befundliste vor.</p></li>
       <li><p>Wir gehen die Ergebnisse gemeinsam durch, danach bekommen Sie alle Unterlagen für den Datenraum.</p></li>
     </ol>
     <p class="price">Den Preis nenne ich Ihnen nach dem Erstgespräch. Er richtet sich danach, wie viele Verträge und Systeme zusammenkommen.</p>
+    <p class="aside-note"><b>Für Prüfer und Investoren:</b> Ist schon ein Prüfer beauftragt, arbeite ich ihm zu. Jede Zahl lässt sich bis zum Beleg nachvollziehen und als Datei übernehmen. Das Urteil bleibt beim Prüfer, CogniCore ist keine Wirtschaftsprüfungsgesellschaft.</p>
   </div>
 </section>
 
-<section class="band">
+<section class="band white" id="vertraulichkeit">
   <div class="wrap">
-    <div class="sh" style="margin-bottom:0">
-      <h2>Für Prüfer und Investoren</h2>
-      <p>Ist schon ein Prüfer beauftragt, arbeite ich ihm zu. Jede Zahl lässt sich bis zum Beleg nachvollziehen und als Datei übernehmen. Das Urteil bleibt beim Prüfer, CogniCore ist keine Wirtschaftsprüfungsgesellschaft.</p>
+    <div class="sh">
+      <h2>Vertraulich von Anfang an</h2>
+      <p>Vor einem Verkauf wissen meist nur wenige davon. Auf Ihrer Seite braucht es nur den Lesezugang zu HubSpot und die Exporte aus ERP und Buchhaltung. Wer davon erfährt, entscheiden Sie.</p>
+    </div>
+    <div class="conf">
+      <div><b>Vereinbarung zuerst</b><p>Bevor ich einen Datensatz sehe, unterschreiben wir eine Vertraulichkeitsvereinbarung.</p></div>
+      <div><b>Nur lesend</b><p>Ich lese HubSpot und ändere dort nichts. Korrekturen gibt es nur auf Ihren ausdrücklichen Auftrag.</p></div>
+      <div><b>Lokal ausgewertet</b><p>Die Auswertung läuft auf meinem Rechner. Was ich aus HubSpot und Ihren Exporten bekomme, geht an keinen Cloud- oder KI-Dienst.</p></div>
+      <div><b>Nach 30 Tagen gelöscht</b><p>30 Tage nach der Übergabe lösche ich alle Daten, die ich von Ihnen bekommen habe.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band white" id="ueber-mich">
+<section class="band" id="ueber-mich">
   <div class="wrap me">
     <img src="img/dominik-siegers.webp" width="800" height="800" alt="Dominik Siegers" loading="lazy">
     <div>
@@ -347,7 +393,7 @@ footer nav{display:flex;gap:20px}
 <section class="contact" id="kontakt">
   <div class="wrap">
     <h2>Nennen Sie mir Ihren Stichtag.</h2>
-    <p>Ich sage Ihnen, was bis dahin machbar ist.</p>
+    <p>Vom Datenzugang bis zur Befundliste rechne ich mit zwei bis drei Wochen. Ich sage Ihnen, was bis zu Ihrem Stichtag machbar ist.</p>
     <div class="cta">
       <a class="btn pri" href="https://book.morgen.so/dominiksiegers/20min">Erstgespräch buchen</a>
       <a class="mail" href="mailto:dominik.siegers@cognicore.de?subject=ARRproof%3A%20Stichtag">dominik.siegers@cognicore.de</a>
@@ -359,7 +405,7 @@ footer nav{display:flex;gap:20px}
 <footer>
   <div class="wrap">
     <span>ARRproof ist eine Leistung der CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Köln. Alle Beispielzahlen und Bildschirmfotos stammen aus einem synthetischen Testdatensatz.</span>
-    <nav aria-label="Weitere Seiten"><a href="fakten/">Fakten zu ARRproof</a><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></nav>
+    <nav aria-label="Weitere Seiten"><a href="checkliste/">Checkliste</a><a href="fakten/">Fakten zu ARRproof</a><a href="https://www.cognicore.de/impressum">Impressum</a><a href="https://cognicore.de/datenschutzerklaerung">Datenschutz</a></nav>
   </div>
 </footer>
 

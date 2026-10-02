@@ -172,6 +172,14 @@
         },
         {
           "@type": "Question",
+          "name": "Where does ARRproof process the data and when is it deleted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ARRproof analyses the data locally at CogniCore IT Solutions GmbH. Data from HubSpot and from the exports goes to no cloud or AI service. A non-disclosure agreement is signed before the first data access. All data received is deleted 30 days after the results are handed over."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Does ARRproof issue an audit opinion?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -183,7 +191,15 @@
           "name": "What do you get from ARRproof?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ARRproof delivers the ARR at the cut-off date with the ARR bridge over twelve months, cohorts and retention, the monthly reconciliation of contract, invoice and books, a list of findings with HubSpot IDs, an analysis of new business with a check of the business plan, and export files for the data room and working papers. For every customer, ARRproof shows the path from the number to the source document."
+            "text": "ARRproof delivers the ARR at the cut-off date with the ARR bridge over twelve months, cohorts and retention, the monthly reconciliation of contract, invoice and books, a list of findings with HubSpot IDs, an analysis of legacy contracts with maintenance and hosting, an analysis of new business with a check of the business plan, and export files for the data room and working papers. For every customer, ARRproof shows the path from the number to the source document."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does ARRproof treat maintenance contracts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ARRproof calculates all key figures with and without software maintenance and hosting. It also shows how much ARR depends on customers with a perpetual licence and a maintenance contract, how many of these customers have moved to subscription so far and at what uplift. Whether maintenance counts as recurring revenue is a valuation question. ARRproof lays out the figures for it and does not decide it."
           }
         },
         {
@@ -196,10 +212,18 @@
         },
         {
           "@type": "Question",
+          "name": "How long does ARRproof take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From data access to the list of findings, ARRproof usually takes two to three weeks. What can be done by a specific cut-off date is clarified in the intro call."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How does an engagement with ARRproof work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An engagement starts with an intro call about the occasion, the date and the systems. This is followed by a non-disclosure agreement, read access to HubSpot and exports from ERP and accounting. Dominik Siegers runs the analysis and presents the list of findings. Finally, the results are discussed together and all documents are handed over."
+            "text": "An engagement starts with an intro call about the occasion, the date and the systems. This is followed by a non-disclosure agreement, read access to HubSpot and exports from ERP and accounting. Dominik Siegers runs the analysis and usually presents the list of findings two to three weeks after data access. Finally, the results are discussed together and all documents are handed over."
           }
         },
         {
@@ -348,8 +372,11 @@ footer nav{display:flex;gap:20px}
           <dt>Occasions</dt><dd>Company sale, succession, investor entry, funding round, preparation of a financial due diligence</dd>
           <dt>Data sources</dt><dd>HubSpot (companies, deals, contracts, contract line items), invoices from the ERP, bank transactions, revenue accounts from the books</dd>
           <dt>Access</dt><dd>Read only; ARRproof writes nothing to HubSpot</dd>
-          <dt>Output</dt><dd>ARR bridge, cohorts and retention, reconciliation of contract, invoice and books, list of findings with HubSpot IDs, new business analysis, exports for the data room and working papers</dd>
+          <dt>Processing</dt><dd>Locally at the provider; data from HubSpot and the exports goes to no cloud or AI service</dd>
+          <dt>Deletion</dt><dd>30 days after the results are handed over</dd>
+          <dt>Output</dt><dd>ARR bridge, cohorts and retention, reconciliation of contract, invoice and books, list of findings with HubSpot IDs, analysis of legacy contracts with maintenance and hosting, new business analysis, exports for the data room and working papers</dd>
           <dt>Checks</dt><dd>23 automated rules across CRM, contracts, invoices and payments</dd>
+          <dt>Duration</dt><dd>Usually two to three weeks from data access to the list of findings</dd>
           <dt>Audit opinion</dt><dd>None; the judgement stays with the advisor</dd>
           <dt>Price</dt><dd>After the intro call, depending on how many contracts and systems are involved</dd>
           <dt>Status</dt><dd>Pilot phase; the analysis tool has been tested on a synthetic test dataset</dd>
@@ -362,6 +389,7 @@ footer nav{display:flex;gap:20px}
     <section aria-labelledby="data">
       <h2 id="data">Data access of ARRproof</h2>
       <p>ARRproof reads data from HubSpot and from ERP and accounting exports. ARRproof does not change any data in HubSpot. CogniCore IT Solutions GmbH cleans up HubSpot only on explicit instruction, as a separate service.</p>
+      <p>A non-disclosure agreement is signed before the first data access. The analysis runs locally at CogniCore IT Solutions GmbH. Data from HubSpot and from the exports goes to no cloud or AI service. All data received is deleted 30 days after the results are handed over.</p>
       <div class="cols" style="margin-top:18px">
         <div class="card"><h3>What ARRproof uses</h3><ul class="l"><li>Companies and deals from HubSpot</li><li>Contracts and contract line items with their terms</li><li>Invoices from the ERP</li><li>Bank transactions</li><li>Revenue accounts from the books</li></ul></div>
         <div class="card"><h3>What ARRproof does not need</h3><ul class="l no"><li>Emails and notes</li><li>Activities of individual employees</li><li>Marketing content</li><li>Write access to HubSpot</li></ul></div>
@@ -390,7 +418,7 @@ footer nav{display:flex;gap:20px}
         <ol class="flow">
           <li>Intro call about the occasion, the date and the systems.</li>
           <li>Non-disclosure agreement, read access to HubSpot, exports from ERP and accounting.</li>
-          <li>Analysis and presentation of the list of findings.</li>
+          <li>Analysis and presentation of the list of findings, usually two to three weeks after data access.</li>
           <li>Joint discussion of the results, then handover of all documents for the data room.</li>
         </ol>
       </div>
@@ -403,10 +431,13 @@ footer nav{display:flex;gap:20px}
       <details><summary>When does ARRproof make sense?</summary><p>ARRproof is intended for occasions where recurring revenue is examined: a company sale, a succession, an investor coming on board, a funding round or the preparation of a financial due diligence.</p></details>
       <details><summary>What data does ARRproof use?</summary><p>From HubSpot, ARRproof uses companies, deals, contracts and contract line items. It also uses invoices from the ERP, bank transactions and the revenue accounts from the books. ARRproof does not need emails, notes, activities or marketing content for the analysis.</p></details>
       <details><summary>Does ARRproof change anything in HubSpot?</summary><p>No. ARRproof only has read access to HubSpot. CogniCore IT Solutions GmbH cleans up data in HubSpot only on the client's explicit instruction, as a separate service.</p></details>
+      <details><summary>Where does ARRproof process the data and when is it deleted?</summary><p>ARRproof analyses the data locally at CogniCore IT Solutions GmbH. Data from HubSpot and from the exports goes to no cloud or AI service. A non-disclosure agreement is signed before the first data access. All data received is deleted 30 days after the results are handed over.</p></details>
       <details><summary>Does ARRproof issue an audit opinion?</summary><p>No. ARRproof delivers figures, documents and findings. ARRproof does not issue an audit opinion or a certification. CogniCore IT Solutions GmbH is not an audit firm. The judgement stays with the advisor.</p></details>
-      <details><summary>What do you get from ARRproof?</summary><p>ARRproof delivers the ARR at the cut-off date with the ARR bridge over twelve months, cohorts and retention, the monthly reconciliation of contract, invoice and books, a list of findings with HubSpot IDs, an analysis of new business with a check of the business plan, and export files for the data room and working papers. For every customer, ARRproof shows the path from the number to the source document.</p></details>
+      <details><summary>What do you get from ARRproof?</summary><p>ARRproof delivers the ARR at the cut-off date with the ARR bridge over twelve months, cohorts and retention, the monthly reconciliation of contract, invoice and books, a list of findings with HubSpot IDs, an analysis of legacy contracts with maintenance and hosting, an analysis of new business with a check of the business plan, and export files for the data room and working papers. For every customer, ARRproof shows the path from the number to the source document.</p></details>
+      <details><summary>How does ARRproof treat maintenance contracts?</summary><p>ARRproof calculates all key figures with and without software maintenance and hosting. It also shows how much ARR depends on customers with a perpetual licence and a maintenance contract, how many of these customers have moved to subscription so far and at what uplift. Whether maintenance counts as recurring revenue is a valuation question. ARRproof lays out the figures for it and does not decide it.</p></details>
       <details><summary>What does ARRproof cost?</summary><p>Dominik Siegers gives the price for ARRproof after the intro call. The price depends on how many contracts and systems are involved.</p></details>
-      <details><summary>How does an engagement with ARRproof work?</summary><p>An engagement starts with an intro call about the occasion, the date and the systems. This is followed by a non-disclosure agreement, read access to HubSpot and exports from ERP and accounting. Dominik Siegers runs the analysis and presents the list of findings. Finally, the results are discussed together and all documents are handed over.</p></details>
+      <details><summary>How long does ARRproof take?</summary><p>From data access to the list of findings, ARRproof usually takes two to three weeks. What can be done by a specific cut-off date is clarified in the intro call.</p></details>
+      <details><summary>How does an engagement with ARRproof work?</summary><p>An engagement starts with an intro call about the occasion, the date and the systems. This is followed by a non-disclosure agreement, read access to HubSpot and exports from ERP and accounting. Dominik Siegers runs the analysis and usually presents the list of findings two to three weeks after data access. Finally, the results are discussed together and all documents are handed over.</p></details>
       <details><summary>Where do the example figures on arrproof.com come from?</summary><p>All example figures and screenshots on arrproof.com come from a synthetic test dataset. The company Velmont Software GmbH with 590 active customers is fictitious.</p></details>
       <details><summary>Who is behind ARRproof?</summary><p>Behind ARRproof is Dominik Siegers, founder and managing director of CogniCore IT Solutions GmbH and an authorised INQA coach. He ran an IT services company for six years, developed portfolio companies from the owners' point of view as a consultant and worked as an investment manager. He has worked with HubSpot since 2016.</p></details>
       <details><summary>Who provides ARRproof?</summary><p>ARRproof is a service of CogniCore IT Solutions GmbH, Im Mediapark 6B, 50670 Cologne, Germany. The contact person is Dominik Siegers, founder and managing director. ARRproof is not a product of HubSpot, Inc.</p></details>
@@ -450,6 +481,7 @@ footer nav{display:flex;gap:20px}
       <h2 id="more">Further information about ARRproof</h2>
       <ul class="l">
         <li><a href="https://book.morgen.so/dominiksiegers/20min">Book an intro call</a></li>
+        <li><a href="../checklist/">Checklist: what a buyer checks in your ARR</a></li>
         <li><a href="https://cognicore.de/datenschutzerklaerung" hreflang="de">Privacy policy</a> (in German)</li>
       </ul>
     </section>
